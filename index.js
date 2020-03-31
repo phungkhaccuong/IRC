@@ -5,8 +5,7 @@ const express = require('express'),
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }));
 
-var searchRouter = require('./routes/searchRouter');
-app.use('/search', searchRouter);
+require('./routers/routers')(app);
 
 console.log("Certificates of Deposit service run on localhost:"+ 3001);
 
