@@ -1,5 +1,6 @@
 const request = require('request'),
       cheerio = require('cheerio'),
+      fs      = require('fs'),
       Bank    = require('./Bank');
       requestPromise = require('request-promise');
 class ManagementBank{
@@ -1611,8 +1612,27 @@ class ManagementBank{
             console.log('there is something wrong with VRB:'+err);
         });     
     }
-    
 
+    /** read data from json file */
+    readFileFromProject() {
+        return new Promise((resolve, reject) => {
+          fs.readFile('./irOfBanks.json',{encoding: 'utf8'},(err, data) => {
+            if(err){
+              reject(err);
+            }
+            resolve(data);
+          });
+        });
+      }
+
+    /**
+     * get annual Interest Rate of other banks
+     */
+    async getDataFromOtherBanks() {
+        var data = await ManagementBank.prototype.readFileFromProject()
+        .catch(error => 'there is an error with getDataFromOtherBanks:'+error);
+        return JSON.parse(data);
+      }
 }
 
 module.exports = ManagementBank;

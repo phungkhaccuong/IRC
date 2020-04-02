@@ -1,0 +1,242 @@
+[
+    {
+        "name":"SHBVN",
+        "logo": "https://shinhan.com.vn/public/themes/shinhan/img/logo.svg",
+    "webOfBank": "https://shinhan.com.vn/vi",
+    "savingPackage": "Tiết kiệm thông thường",
+    "minimumDepositAmount": 500000,
+    "annualInterestRate": {
+        "1": 3.5,
+        "3": 3.9,
+        "6": 4.4,
+        "9": 4.6,
+        "12": 5.3,
+        "18": 5.4,
+        "24": 5.4
+        }
+    },
+    {
+        "name":"TECHCOMBANK",
+        "logo": "https://www.techcombank.com.vn/Content/images/logo.png",
+    "webOfBank": "https://www.techcombank.com.vn/trang-chu",
+    "savingPackage": "Tiết kiệm thông thường",
+    "minimumDepositAmount": 500000,
+    "annualInterestRate": {
+        "1": 4,
+        "3": 4,
+        "6": 5.7,
+        "9": 5.2,
+        "12": 5.8,
+        "18": 5.9,
+        "24": 5.7
+        }
+    },
+    {
+        "name":"UOB",
+        "logo": "https://www.uob.com.vn/web-resources/common/images/uob-logo.jpg",
+    "webOfBank": "https://www.uob.com.vn/general/index.page",
+    "savingPackage": "Tiết kiệm thông thường",
+    "minimumDepositAmount": 500000,
+    "annualInterestRate": {
+        "1": 3.5,
+        "3": 4,
+        "6": 5.6,
+        "9": 6,
+        "12": 6,
+        "18": 6,
+        "24": 0
+        }
+    },
+    {
+        "name":"VIETABANK",
+        "logo": "https://www.vietabank.com.vn/Portals/0/HTML/logoweb.png",
+    "webOfBank": "https://www.vietabank.com.vn/",
+    "savingPackage": "Tiết kiệm thông thường",
+    "minimumDepositAmount": 500000,
+    "annualInterestRate": {
+        "1": 4.75,
+        "3": 4.75,
+        "6": 6.3,
+        "9": 6.3,
+        "12": 7,
+        "18": 7.1,
+        "24": 7.1
+        }
+    },
+    {
+        "name":"VIETBANK",
+        "logo": "https://www.vietbank.com.vn/img/logo.png",
+    "webOfBank": "https://www.vietbank.com.vn/",
+    "savingPackage": "Tiết kiệm thông thường",
+    "minimumDepositAmount": 500000,
+    "annualInterestRate": {
+        "1": 4.65,
+        "3": 4.75,
+        "6": 7.2,
+        "9": 7.5,
+        "12": 7.6,
+        "18": 7.8,
+        "24": 7.9
+        }
+    },
+    {
+        "name":"VPBANK",
+        "logo": "https://www.vpbank.com.vn/sites/default/files/logo.jpg",
+    "webOfBank": "https://www.vpbank.com.vn/",
+    "savingPackage": "Tiết kiệm thông thường",
+    "minimumDepositAmount": 500000,
+    "annualInterestRate": {
+        "1": 4.5,
+        "3": 4.55,
+        "6": 6.8,
+        "9": 6.8,
+        "12": 6.9,
+        "18": 7,
+        "24": 7
+        }
+    },
+    {
+        "name":"WOORI",
+        "logo": "https://go.wooribank.com/resources/images/logo/white/logo_vn.png",
+    "webOfBank": "https://go.wooribank.com/vn/ib/main/IbMain.do",
+    "savingPackage": "Tiết kiệm thông thường",
+    "minimumDepositAmount": 500000,
+    "annualInterestRate": {
+        "1": 0,
+        "3": 3.9,
+        "6": 4.4,
+        "9": 0,
+        "12": 5.3,
+        "18": 0,
+        "24": 0
+        }
+    },
+    {
+        "name":"SCBVL",
+        "logo": "https://www.sc.com/global/av/standard_chartered_logo_svg.svg",
+    "webOfBank": "https://www.sc.com/vn/",
+    "savingPackage": "Tiết kiệm thông thường",
+    "minimumDepositAmount": 500000,
+    "annualInterestRate": {
+        "1": 1.53,
+        "3": 1.99,
+        "6": 2.18,
+        "9": 2.37,
+        "12": 2.56,
+        "18": 2.59,
+        "24": 2.62
+        }
+    },
+    {
+        "name":"SACOMBANK",
+        "logo": "https://www.sacombank.com.vn/Style%20Library/2018/images/logo.png",
+    "webOfBank": "https://www.sacombank.com.vn/Pages/default.aspx",
+    "savingPackage": "Tiết kiệm thông thường",
+    "minimumDepositAmount": 500000,
+    "annualInterestRate": {
+        "1": 4.75,
+        "3": 4.75,
+        "6": 6.6,
+        "9": 6.6,
+        "12": 7.2,
+        "18": 7.6,
+        "24": 7.6
+        }
+    },
+    {
+        "name":"MSB",
+        "logo": "https://www.msb.com.vn/.msb-crud-portlets/faces/javax.faces.resource/images/top-logo-1.svg",
+    "webOfBank": "https://www.msb.com.vn/",
+    "savingPackage": "Tiết kiệm thông thường",
+    "minimumDepositAmount": 500000,
+    "annualInterestRate": {
+        "1": 4.65,
+        "3": 4.75,
+        "6": 6.65,
+        "9": 6.75,
+        "12": 6.85,
+        "18": 7.25,
+        "24": 7.35
+        }
+    },
+    {
+        "name":"HSBC",
+        "logo": "https://cdn.hsbc.com.vn/content/dam/hsbc/hbmu/dcc/hsbc-logo.svg",
+    "webOfBank": "https://www.hsbc.com.vn/",
+    "savingPackage": "Tiết kiệm thông thường",
+    "minimumDepositAmount": 500000,
+    "annualInterestRate": {
+        "1": 0.5,
+        "3": 1.25,
+        "6": 1.75,
+        "9": 1.75,
+        "12": 1.75,
+        "18": 2.75,
+        "24": 2.75
+        }
+    },
+    {
+        "name":"HDBANK",
+        "logo": "https://www.hdbank.com.vn/static/image/Logo.png",
+    "webOfBank": "https://www.hdbank.com.vn/",
+    "savingPackage": "Tiết kiệm thông thường",
+    "minimumDepositAmount": 500000,
+    "annualInterestRate": {
+        "1": 4.75,
+        "3": 4.75,
+        "6": 6.8,
+        "9": 6.8,
+        "12": 7.3,
+        "18": 7.4,
+        "24": 7
+        }
+    },
+    {
+        "name":"COOPBANK",
+        "logo": "http://co-opbank.vn/wp-content/uploads/2014/09/banner.png",
+    "webOfBank": "http://co-opbank.vn/",
+    "savingPackage": "Tiết kiệm thông thường",
+    "minimumDepositAmount": 500000,
+    "annualInterestRate": {
+        "1": 4.8,
+        "3": 5.52,
+        "6": 5.61,
+        "9": 5.71,
+        "12": 6.85,
+        "18": 6.95,
+        "24": 0
+        }
+    },
+    {
+        "name":"CIMB",
+        "logo": "https://www.cimbbank.com.vn/content/dam/cimbvietnam/cimblogo.jpg",
+    "webOfBank": "https://www.cimbbank.com.vn/vi/personal/index.html",
+    "savingPackage": "Tiết kiệm thông thường",
+    "minimumDepositAmount": 500000,
+    "annualInterestRate": {
+        "1": 4.4,
+        "3": 4.7,
+        "6": 5.7,
+        "9": 5.9,
+        "12": 7,
+        "18": 7,
+        "24": 0
+        }
+    },
+    {
+        "name":"ACB",
+    "logo": "https://www.acb.com.vn/wps/wcm/connect/f6798828-b0d3-4061-8581-f7ee2b9c1d68/logo-acb.png?MOD=AJPERES&CACHEID=f6798828-b0d3-4061-8581-f7ee2b9c1d68",
+    "webOfBank": "https://www.acb.com.vn/",
+    "savingPackage": "Tiết kiệm thông thường",
+    "minimumDepositAmount": 500000,
+    "annualInterestRate": {
+        "1": 4.6,
+        "3": 4.75,
+        "6": 6.45,
+        "9": 6.55,
+        "12": 6.85,
+        "18": 7.35,
+        "24": 7.35
+        }
+    }
+]

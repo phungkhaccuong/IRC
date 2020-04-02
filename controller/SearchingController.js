@@ -40,20 +40,27 @@ class SearchingController {
             ManagementBank.prototype.getDataFromSAIGONBANK(),
             ManagementBank.prototype.getDataFromSHB(),
             ManagementBank.prototype.getDataFromVIETINBANK(),
-            ManagementBank.prototype.getDataFromVRB()
+            ManagementBank.prototype.getDataFromVRB(),
+            ManagementBank.prototype.getDataFromOtherBanks()
         ]).then(dataOfBanks => {
             var data = [];
             for(let i = 0 ; i < dataOfBanks.length ; i++ ) {
-                if(dataOfBanks[i].status === 'fulfilled' && (typeof dataOfBanks[i].value !== 'undefined'))  data.push(dataOfBanks[i].value);
+                if(dataOfBanks[i].status === 'fulfilled' && (typeof dataOfBanks[i].value !== 'undefined')) {
+                    if(!Array.isArray(dataOfBanks[i].value)) {
+                        data.push(dataOfBanks[i].value);
+                    }else{
+                        data.push(...dataOfBanks[i].value);
+                    }
+                }
             }
+            
             return data;
         });
-
         /** get data for displaying */
         try{
             dataForDisplaying = SearchingController.prototype.handleDataForDisplay(dataGetFromBanks,money,period);
         } catch(error) {
-            console.log('There is a error:' + error)
+            console.log('There is an error:' + error)
         }
         console.log(dataForDisplaying);
         res.send(dataForDisplaying);
