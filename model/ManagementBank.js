@@ -36,17 +36,17 @@ class ManagementBank{
         var data = $('tbody td');
         data.each((i,element) => {
             switch(i){
-                case 8 : irc['1'] = parseFloat($(element).text().trim()); break;
-                case 20: irc['3'] = parseFloat($(element).text().trim()); break;
-                case 32: irc['6'] = parseFloat($(element).text().trim()); break;
-                case 44: irc['9'] = parseFloat($(element).text().trim()); break;
-                case 56: irc['12'] = parseFloat($(element).text().trim()); break;
-                case 62: irc['18'] = parseFloat($(element).text().trim()); break;
-                case 68: irc['24'] = parseFloat($(element).text().trim()); break;
+                case 8 : irc[1] = parseFloat($(element).text().trim()); break;
+                case 20: irc[3] = parseFloat($(element).text().trim()); break;
+                case 32: irc[6] = parseFloat($(element).text().trim()); break;
+                case 44: irc[9] = parseFloat($(element).text().trim()); break;
+                case 56: irc[12] = parseFloat($(element).text().trim()); break;
+                case 62: irc[18] = parseFloat($(element).text().trim()); break;
+                case 68: irc[24] = parseFloat($(element).text().trim()); break;
                 default: break;
             }
         })
-        if(irc['1'] && irc['3'] && irc['6'] && irc['9'] && irc['12'] && irc['18'] && irc['24']) {
+        if(irc[1] && irc[3] && irc[6] && irc[9] && irc[12] && irc[18] && irc[24]) {
             bank.annualInterestRate = irc;
         } else{
             return undefined;
@@ -83,17 +83,17 @@ class ManagementBank{
             var data = $('tbody td');
             data.each((i,element) => {
                 switch(i){
-                    case 5 : irc['1'] = parseFloat($(element).text().trim()); break;
-                    case 13: irc['3'] = parseFloat($(element).text().trim()); break;
-                    case 25: irc['6'] = parseFloat($(element).text().trim()); break;
-                    case 37: irc['9'] = parseFloat($(element).text().trim()); break;
-                    case 49: irc['12'] = parseFloat($(element).text().trim()); break;
-                    case 61: irc['18'] = parseFloat($(element).text().trim()); break;
-                    case 65: irc['24'] = parseFloat($(element).text().trim()); break;
+                    case 5 : irc[1] = parseFloat($(element).text().trim()); break;
+                    case 13: irc[3] = parseFloat($(element).text().trim()); break;
+                    case 25: irc[6] = parseFloat($(element).text().trim()); break;
+                    case 37: irc[9] = parseFloat($(element).text().trim()); break;
+                    case 49: irc[12] = parseFloat($(element).text().trim()); break;
+                    case 61: irc[18] = parseFloat($(element).text().trim()); break;
+                    case 65: irc[24] = parseFloat($(element).text().trim()); break;
                     default: break;
                 }
             })
-            if(irc['1'] && irc['3'] && irc['6'] && irc['9'] && irc['12'] && irc['18'] && irc['24']) {
+            if(irc[1] && irc[3] && irc[6] && irc[9] && irc[12] && irc[18] && irc[24]) {
                 bank.annualInterestRate = irc;
             } else{
                 return undefined;
@@ -131,38 +131,38 @@ class ManagementBank{
             data.each((i,element) => {
                 switch(i){
                     case 8 : {
-                        irc['1'] = parseFloat($(element).find('td:nth-child(3)').text().trim().replace('\,','.')); 
+                        irc[1] = parseFloat($(element).find('td:nth-child(3)').text().trim().replace('\,','.')); 
                         break;
                     }
                     case 10 : {
-                        irc['3'] = parseFloat($(element).find('td:nth-child(3)').text().trim().replace('\,','.')); 
+                        irc[3] = parseFloat($(element).find('td:nth-child(3)').text().trim().replace('\,','.')); 
                         break;
                     }
                     case 13 : {
-                        irc['6'] = parseFloat($(element).find('td:nth-child(3)').text().trim().replace('\,','.')); 
+                        irc[6] = parseFloat($(element).find('td:nth-child(3)').text().trim().replace('\,','.')); 
                         break;
                     }
                     case 16 : {
-                        irc['9'] = parseFloat($(element).find('td:nth-child(3)').text().trim().replace('\,','.')); 
+                        irc[9] = parseFloat($(element).find('td:nth-child(3)').text().trim().replace('\,','.')); 
                         break;
                     }
                     case 19 : {
-                        irc['12'] = parseFloat($(element).find('td:nth-child(3)').text().trim().replace('\,','.')); 
+                        irc[12] = parseFloat($(element).find('td:nth-child(3)').text().trim().replace('\,','.')); 
                         break;
                     }
                     case 22 : {
-                        irc['18'] = parseFloat($(element).find('td:nth-child(3)').text().trim().replace('\,','.')); 
+                        irc[18] = parseFloat($(element).find('td:nth-child(3)').text().trim().replace('\,','.')); 
                         break;
                     }
                     case 23 : {
-                        irc['24'] = parseFloat($(element).find('td:nth-child(3)').text().trim().replace('\,','.')); 
+                        irc[24] = parseFloat($(element).find('td:nth-child(3)').text().trim().replace('\,','.')); 
                         break;
                     }
                     default: break;
                     
                 }
             })
-            if(irc['1'] && irc['3'] && irc['6'] && irc['9'] && irc['12'] && irc['18'] && irc['24']) {
+            if(irc[1] && irc[3] && irc[6] && irc[9] && irc[12] && irc[18] && irc[24]) {
                 bank.annualInterestRate = irc;
             } else{
                 return undefined;
@@ -200,38 +200,38 @@ class ManagementBank{
             data.each((i,element) => {
                 switch(i){
                     case 9 : {
-                        irc['1'] = parseFloat($(element).find('td:nth-child(6)').text().trim()); 
+                        irc[1] = parseFloat($(element).find('td:nth-child(6)').text().trim()); 
                         break;
                     }
                     case 11 : {
-                        irc['3'] = parseFloat($(element).find('td:nth-child(6)').text().trim());
+                        irc[3] = parseFloat($(element).find('td:nth-child(6)').text().trim());
                         break;
                     }
                     case 12 : {
-                        irc['6'] = parseFloat($(element).find('td:nth-child(6)').text().trim());
+                        irc[6] = parseFloat($(element).find('td:nth-child(6)').text().trim());
                         break;
                     }
                     case 13 : {
-                        irc['9'] = parseFloat($(element).find('td:nth-child(6)').text().trim()); 
+                        irc[9] = parseFloat($(element).find('td:nth-child(6)').text().trim()); 
                         break;
                     }
                     case 14 : {
-                        irc['12'] = parseFloat($(element).find('td:nth-child(6)').text().trim());  
+                        irc[12] = parseFloat($(element).find('td:nth-child(6)').text().trim());  
                         break;
                     }
                     case 16 : {
-                        irc['18'] = parseFloat($(element).find('td:nth-child(6)').text().trim());
+                        irc[18] = parseFloat($(element).find('td:nth-child(6)').text().trim());
                         break;
                     }
                     case 17 : {
-                        irc['24'] = parseFloat($(element).find('td:nth-child(6)').text().trim());
+                        irc[24] = parseFloat($(element).find('td:nth-child(6)').text().trim());
                         break;
                     }
                     default: break;
                     
                 }
             })
-            if(irc['1'] && irc['3'] && irc['6'] && irc['9'] && irc['12'] && irc['18'] && irc['24']) {
+            if(irc[1] && irc[3] && irc[6] && irc[9] && irc[12] && irc[18] && irc[24]) {
                 bank.annualInterestRate = irc;
             } else{
                 return undefined;
@@ -269,38 +269,38 @@ class ManagementBank{
             data.each((i,element) => {
                 switch(i){
                     case 3 : {
-                        irc['1'] = parseFloat($(element).find('td:nth-child(2)').text().trim()); 
+                        irc[1] = parseFloat($(element).find('td:nth-child(2)').text().trim()); 
                         break;
                     }
                     case 5 : {
-                        irc['3'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[3] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 8 : {
-                        irc['6'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[6] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 11 : {
-                        irc['9'] = parseFloat($(element).find('td:nth-child(2)').text().trim()); 
+                        irc[9] = parseFloat($(element).find('td:nth-child(2)').text().trim()); 
                         break;
                     }
                     case 14 : {
-                        irc['12'] = parseFloat($(element).find('td:nth-child(2)').text().trim());  
+                        irc[12] = parseFloat($(element).find('td:nth-child(2)').text().trim());  
                         break;
                     }
                     case 17 : {
-                        irc['18'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[18] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 18 : {
-                        irc['24'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[24] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     default: break;
                     
                 }
             })
-            if(irc['1'] && irc['3'] && irc['6'] && irc['9'] && irc['12'] && irc['18'] && irc['24']) {
+            if(irc[1] && irc[3] && irc[6] && irc[9] && irc[12] && irc[18] && irc[24]) {
                 bank.annualInterestRate = irc;
             } else{
                 return undefined;
@@ -338,38 +338,38 @@ class ManagementBank{
             data.each((i,element) => {
                 switch(i){
                     case 4 : {
-                        irc['1'] = parseFloat($(element).find('td:nth-child(2)').text().trim()); 
+                        irc[1] = parseFloat($(element).find('td:nth-child(2)').text().trim()); 
                         break;
                     }
                     case 6 : {
-                        irc['3'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[3] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 9 : {
-                        irc['6'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[6] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 12 : {
-                        irc['9'] = parseFloat($(element).find('td:nth-child(2)').text().trim()); 
+                        irc[9] = parseFloat($(element).find('td:nth-child(2)').text().trim()); 
                         break;
                     }
                     case 15 : {
-                        irc['12'] = parseFloat($(element).find('td:nth-child(2)').text().trim());  
+                        irc[12] = parseFloat($(element).find('td:nth-child(2)').text().trim());  
                         break;
                     }
                     case 20 : {
-                        irc['18'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[18] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 25 : {
-                        irc['24'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[24] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     default: break;
                     
                 }
             })
-            if(irc['1'] && irc['3'] && irc['6'] && irc['9'] && irc['12'] && irc['18'] && irc['24']) {
+            if(irc[1] && irc[3] && irc[6] && irc[9] && irc[12] && irc[18] && irc[24]) {
                 bank.annualInterestRate = irc;
             } else{
                 return undefined;
@@ -408,38 +408,38 @@ class ManagementBank{
             data.each((i,element) => {
                 switch(i){
                     case 1 : {
-                        irc['1'] = parseFloat($(element).find('td:nth-child(2)').text().trim()); 
+                        irc[1] = parseFloat($(element).find('td:nth-child(2)').text().trim()); 
                         break;
                     }
                     case 2 : {
-                        irc['3'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[3] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 3 : {
-                        irc['6'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[6] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 4 : {
-                        irc['9'] = parseFloat($(element).find('td:nth-child(2)').text().trim()); 
+                        irc[9] = parseFloat($(element).find('td:nth-child(2)').text().trim()); 
                         break;
                     }
                     case 5 : {
-                        irc['12'] = parseFloat($(element).find('td:nth-child(2)').text().trim());  
+                        irc[12] = parseFloat($(element).find('td:nth-child(2)').text().trim());  
                         break;
                     }
                     case 8 : {
-                        irc['18'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[18] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 10 : {
-                        irc['24'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[24] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     default: break;
                     
                 }
             })
-            if(irc['1'] && irc['3'] && irc['6'] && irc['9'] && irc['12'] && irc['18'] && irc['24']) {
+            if(irc[1] && irc[3] && irc[6] && irc[9] && irc[12] && irc[18] && irc[24]) {
                 bank.annualInterestRate = irc;
             } else{
                 return undefined;
@@ -477,38 +477,38 @@ class ManagementBank{
             data.each((i,element) => {
                 switch(i){
                     case 3 : {
-                        irc['1'] = parseFloat($(element).find('td:nth-child(6)').text().trim()); 
+                        irc[1] = parseFloat($(element).find('td:nth-child(6)').text().trim()); 
                         break;
                     }
                     case 5 : {
-                        irc['3'] = parseFloat($(element).find('td:nth-child(6)').text().trim());
+                        irc[3] = parseFloat($(element).find('td:nth-child(6)').text().trim());
                         break;
                     }
                     case 8 : {
-                        irc['6'] = parseFloat($(element).find('td:nth-child(6)').text().trim());
+                        irc[6] = parseFloat($(element).find('td:nth-child(6)').text().trim());
                         break;
                     }
                     case 11 : {
-                        irc['9'] = parseFloat($(element).find('td:nth-child(6)').text().trim()); 
+                        irc[9] = parseFloat($(element).find('td:nth-child(6)').text().trim()); 
                         break;
                     }
                     case 14 : {
-                        irc['12'] = parseFloat($(element).find('td:nth-child(6)').text().trim());  
+                        irc[12] = parseFloat($(element).find('td:nth-child(6)').text().trim());  
                         break;
                     }
                     case 17 : {
-                        irc['18'] = parseFloat($(element).find('td:nth-child(6)').text().trim());
+                        irc[18] = parseFloat($(element).find('td:nth-child(6)').text().trim());
                         break;
                     }
                     case 18 : {
-                        irc['24'] = parseFloat($(element).find('td:nth-child(6)').text().trim());
+                        irc[24] = parseFloat($(element).find('td:nth-child(6)').text().trim());
                         break;
                     }
                     default: break;
                     
                 }
             })
-            if(irc['1'] && irc['3'] && irc['6'] && irc['9'] && irc['12'] && irc['18'] && irc['24']) {
+            if(irc[1] && irc[3] && irc[6] && irc[9] && irc[12] && irc[18] && irc[24]) {
                 bank.annualInterestRate = irc;
             } else{
                 return undefined;
@@ -546,38 +546,38 @@ class ManagementBank{
             data.each((i,element) => {
                 switch(i){
                     case 2 : {
-                        irc['1'] = parseFloat($(element).find('td:nth-child(2)').text().trim()); 
+                        irc[1] = parseFloat($(element).find('td:nth-child(2)').text().trim()); 
                         break;
                     }
                     case 4 : {
-                        irc['3'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[3] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 7 : {
-                        irc['6'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[6] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 8 : {
-                        irc['9'] = parseFloat($(element).find('td:nth-child(2)').text().trim()); 
+                        irc[9] = parseFloat($(element).find('td:nth-child(2)').text().trim()); 
                         break;
                     }
                     case 9 : {
-                        irc['12'] = parseFloat($(element).find('td:nth-child(2)').text().trim());  
+                        irc[12] = parseFloat($(element).find('td:nth-child(2)').text().trim());  
                         break;
                     }
                     case 11 : {
-                        irc['18'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[18] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 12 : {
-                        irc['24'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[24] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     default: break;
                     
                 }
             })
-            if(irc['1'] && irc['3'] && irc['6'] && irc['9'] && irc['12'] && irc['18'] && irc['24']) {
+            if(irc[1] && irc[3] && irc[6] && irc[9] && irc[12] && irc[18] && irc[24]) {
                 bank.annualInterestRate = irc;
             } else{
                 return undefined;
@@ -611,31 +611,31 @@ class ManagementBank{
             data.each((i,element) => {
                 switch(i){
                     case 10 : {
-                        irc['1'] = parseFloat($(element).find('td:nth-child(2)').text().trim()); 
+                        irc[1] = parseFloat($(element).find('td:nth-child(2)').text().trim()); 
                         break;
                     }
                     case 12 : {
-                        irc['3'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[3] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 13 : {
-                        irc['6'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[6] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 14 : {
-                        irc['9'] = parseFloat($(element).find('td:nth-child(2)').text().trim()); 
+                        irc[9] = parseFloat($(element).find('td:nth-child(2)').text().trim()); 
                         break;
                     }
                     case 15 : {
-                        irc['12'] = parseFloat($(element).find('td:nth-child(2)').text().trim());  
+                        irc[12] = parseFloat($(element).find('td:nth-child(2)').text().trim());  
                         break;
                     }
                     case 17 : {
-                        irc['18'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[18] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 18 : {
-                        irc['24'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[24] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     default: break;
@@ -673,38 +673,38 @@ class ManagementBank{
             
             var data = $('table.responsive tbody tr');
 
-            irc['1'] = 0;
+            irc[1] = 0;
             data.each((i,element) => {
                 switch(i){
                     case 1 : {
-                        irc['3'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[3] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 2 : {
-                        irc['6'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[6] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 3 : {
-                        irc['9'] = parseFloat($(element).find('td:nth-child(2)').text().trim()); 
+                        irc[9] = parseFloat($(element).find('td:nth-child(2)').text().trim()); 
                         break;
                     }
                     case 4 : {
-                        irc['12'] = parseFloat($(element).find('td:nth-child(2)').text().trim());  
+                        irc[12] = parseFloat($(element).find('td:nth-child(2)').text().trim());  
                         break;
                     }
                     case 6 : {
-                        irc['18'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[18] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 7 : {
-                        irc['24'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[24] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     default: break;
                     
                 }
             })
-            if(irc['1'] && irc['3'] && irc['6'] && irc['9'] && irc['12'] && irc['18'] && irc['24']) {
+            if(irc[1] && irc[3] && irc[6] && irc[9] && irc[12] && irc[18] && irc[24]) {
                 bank.annualInterestRate = irc;
             } else{
                 return undefined;
@@ -742,38 +742,38 @@ class ManagementBank{
             data.each((i,element) => {
                 switch(i){
                     case 7 : {
-                        irc['1'] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.')); 
+                        irc[1] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.')); 
                         break;
                     }
                     case 9 : {
-                        irc['3'] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
+                        irc[3] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
                         break;
                     }
                     case 12 : {
-                        irc['6'] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
+                        irc[6] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
                         break;
                     }
                     case 15 : {
-                        irc['9'] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
+                        irc[9] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
                         break;
                     }
                     case 18 : {
-                        irc['12'] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
+                        irc[12] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
                         break;
                     }
                     case 20 : {
-                        irc['18'] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
+                        irc[18] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
                         break;
                     }
                     case 21 : {
-                        irc['24'] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
+                        irc[24] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
                         break;
                     }
                     default: break;
                     
                 }
             })
-            if(irc['1'] && irc['3'] && irc['6'] && irc['9'] && irc['12'] && irc['18'] && irc['24']) {
+            if(irc[1] && irc[3] && irc[6] && irc[9] && irc[12] && irc[18] && irc[24]) {
                 bank.annualInterestRate = irc;
             } else{
                 return undefined;
@@ -807,31 +807,31 @@ class ManagementBank{
             data.each((i,element) => {
                 switch(i){
                     case 2 : {
-                        irc['1'] = parseFloat($(element).find('td:nth-child(2)').text().trim()); 
+                        irc[1] = parseFloat($(element).find('td:nth-child(2)').text().trim()); 
                         break;
                     }
                     case 4 : {
-                        irc['3'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[3] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 7 : {
-                        irc['6'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[6] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 10 : {
-                        irc['9'] = parseFloat($(element).find('td:nth-child(2)').text().trim()); 
+                        irc[9] = parseFloat($(element).find('td:nth-child(2)').text().trim()); 
                         break;
                     }
                     case 13 : {
-                        irc['12'] = parseFloat($(element).find('td:nth-child(2)').text().trim());  
+                        irc[12] = parseFloat($(element).find('td:nth-child(2)').text().trim());  
                         break;
                     }
                     case 16 : {
-                        irc['18'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[18] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 17 : {
-                        irc['24'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[24] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     default: break;
@@ -872,38 +872,38 @@ class ManagementBank{
             data.each((i,element) => {
                 switch(i){
                     case 6 : {
-                        irc['1'] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
+                        irc[1] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
                         break;
                     }
                     case 8 : {
-                        irc['3'] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
+                        irc[3] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
                         break;
                     }
                     case 11 : {
-                        irc['6'] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
+                        irc[6] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
                         break;
                     }
                     case 14 : {
-                        irc['9'] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
+                        irc[9] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
                         break;
                     }
                     case 17 : {
-                        irc['12'] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));  
+                        irc[12] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));  
                         break;
                     }
                     case 19 : {
-                        irc['18'] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
+                        irc[18] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
                         break;
                     }
                     case 20 : {
-                        irc['24'] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
+                        irc[24] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
                         break;
                     }
                     default: break;
                     
                 }
             })
-            if(irc['1'] && irc['3'] && irc['6'] && irc['9'] && irc['12'] && irc['18'] && irc['24']) {
+            if(irc[1] && irc[3] && irc[6] && irc[9] && irc[12] && irc[18] && irc[24]) {
                 bank.annualInterestRate = irc;
             } else{
                 return undefined;
@@ -934,31 +934,31 @@ class ManagementBank{
             
             var data = $('div#tab-1 h6');
             console.log(data.length);
-            irc['9'] = 0;
+            irc[9] = 0;
             data.each((i,element) => {
                 switch(i){
                     case 0 : {
-                        irc['1'] = parseFloat($(element).find('td:nth-child(4)').text().trim());
+                        irc[1] = parseFloat($(element).find('td:nth-child(4)').text().trim());
                         break;
                     }
                     case 1 : {
-                        irc['3'] = parseFloat($(element).find('td:nth-child(4)').text().trim());
+                        irc[3] = parseFloat($(element).find('td:nth-child(4)').text().trim());
                         break;
                     }
                     case 2 : {
-                        irc['6'] = parseFloat($(element).find('td:nth-child(4)').text().trim());
+                        irc[6] = parseFloat($(element).find('td:nth-child(4)').text().trim());
                         break;
                     }
                     case 3 : {
-                        irc['12'] = parseFloat($(element).find('td:nth-child(4)').text().trim());  
+                        irc[12] = parseFloat($(element).find('td:nth-child(4)').text().trim());  
                         break;
                     }
                     case 4 : {
-                        irc['18'] = parseFloat($(element).find('td:nth-child(4)').text().trim());
+                        irc[18] = parseFloat($(element).find('td:nth-child(4)').text().trim());
                         break;
                     }
                     case 5 : {
-                        irc['24'] = parseFloat($(element).find('td:nth-child(4)').text().trim());
+                        irc[24] = parseFloat($(element).find('td:nth-child(4)').text().trim());
                         break;
                     }
                     default: break;
@@ -999,38 +999,38 @@ class ManagementBank{
             data.each((i,element) => {
                 switch(i){
                     case 5 : {
-                        irc['1'] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
+                        irc[1] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
                         break;
                     }
                     case 7 : {
-                        irc['3'] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
+                        irc[3] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
                         break;
                     }
                     case 10 : {
-                        irc['6'] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
+                        irc[6] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
                         break;
                     }
                     case 13 : {
-                        irc['9'] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
+                        irc[9] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
                         break;
                     }
                     case 16 : {
-                        irc['12'] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
+                        irc[12] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
                         break;
                     }
                     case 18 : {
-                        irc['18'] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
+                        irc[18] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
                         break;
                     }
                     case 19 : {
-                        irc['24'] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
+                        irc[24] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
                         break;
                     }
                     default: break;
                     
                 }
             })
-            if(irc['1'] && irc['3'] && irc['6'] && irc['9'] && irc['12'] && irc['18'] && irc['24']) {
+            if(irc[1] && irc[3] && irc[6] && irc[9] && irc[12] && irc[18] && irc[24]) {
                 bank.annualInterestRate = irc;
             } else{
                 return undefined;
@@ -1068,38 +1068,38 @@ class ManagementBank{
             data.each((i,element) => {
                 switch(i){
                     case 5 : {
-                        irc['1'] = parseFloat($(element).find('td:nth-child(3)').text().trim());
+                        irc[1] = parseFloat($(element).find('td:nth-child(3)').text().trim());
                         break;
                     }
                     case 7 : {
-                        irc['3'] = parseFloat($(element).find('td:nth-child(3)').text().trim());
+                        irc[3] = parseFloat($(element).find('td:nth-child(3)').text().trim());
                         break;
                     }
                     case 10 : {
-                        irc['6'] = parseFloat($(element).find('td:nth-child(3)').text().trim());
+                        irc[6] = parseFloat($(element).find('td:nth-child(3)').text().trim());
                         break;
                     }
                     case 13 : {
-                        irc['9'] = parseFloat($(element).find('td:nth-child(3)').text().trim());
+                        irc[9] = parseFloat($(element).find('td:nth-child(3)').text().trim());
                         break;
                     }
                     case 16 : {
-                        irc['12'] = parseFloat($(element).find('td:nth-child(3)').text().trim());  
+                        irc[12] = parseFloat($(element).find('td:nth-child(3)').text().trim());  
                         break;
                     }
                     case 19 : {
-                        irc['18'] = parseFloat($(element).find('td:nth-child(3)').text().trim());
+                        irc[18] = parseFloat($(element).find('td:nth-child(3)').text().trim());
                         break;
                     }
                     case 20 : {
-                        irc['24'] = parseFloat($(element).find('td:nth-child(3)').text().trim());
+                        irc[24] = parseFloat($(element).find('td:nth-child(3)').text().trim());
                         break;
                     }
                     default: break;
                     
                 }
             })
-            if(irc['1'] && irc['3'] && irc['6'] && irc['9'] && irc['12'] && irc['18'] && irc['24']) {
+            if(irc[1] && irc[3] && irc[6] && irc[9] && irc[12] && irc[18] && irc[24]) {
                 bank.annualInterestRate = irc;
             } else{
                 return undefined;
@@ -1134,31 +1134,31 @@ class ManagementBank{
             data.each((i,element) => {
                 switch(i){
                     case 2 : {
-                        irc['1'] = parseFloat($(element).find('td:nth-child(4)').text().trim());
+                        irc[1] = parseFloat($(element).find('td:nth-child(4)').text().trim());
                         break;
                     }
                     case 4 : {
-                        irc['3'] = parseFloat($(element).find('td:nth-child(4)').text().trim());
+                        irc[3] = parseFloat($(element).find('td:nth-child(4)').text().trim());
                         break;
                     }
                     case 6 : {
-                        irc['6'] = parseFloat($(element).find('td:nth-child(4)').text().trim());
+                        irc[6] = parseFloat($(element).find('td:nth-child(4)').text().trim());
                         break;
                     }
                     case 7 : {
-                        irc['9'] = parseFloat($(element).find('td:nth-child(4)').text().trim());
+                        irc[9] = parseFloat($(element).find('td:nth-child(4)').text().trim());
                         break;
                     }
                     case 9 : {
-                        irc['12'] = parseFloat($(element).find('td:nth-child(4)').text().trim());  
+                        irc[12] = parseFloat($(element).find('td:nth-child(4)').text().trim());  
                         break;
                     }
                     case 12 : {
-                        irc['18'] = parseFloat($(element).find('td:nth-child(4)').text().trim());
+                        irc[18] = parseFloat($(element).find('td:nth-child(4)').text().trim());
                         break;
                     }
                     case 23 : {
-                        irc['24'] = parseFloat($(element).find('td:nth-child(4)').text().trim());
+                        irc[24] = parseFloat($(element).find('td:nth-child(4)').text().trim());
                         break;
                     }
                     default: break;
@@ -1194,31 +1194,31 @@ class ManagementBank{
             data.each((i,element) => {
                 switch(i){
                     case 4 : {
-                        irc['1'] = parseFloat($(element).find('td:nth-child(4)').text().trim());
+                        irc[1] = parseFloat($(element).find('td:nth-child(4)').text().trim());
                         break;
                     }
                     case 6 : {
-                        irc['3'] = parseFloat($(element).find('td:nth-child(4)').text().trim());
+                        irc[3] = parseFloat($(element).find('td:nth-child(4)').text().trim());
                         break;
                     }
                     case 9 : {
-                        irc['6'] = parseFloat($(element).find('td:nth-child(4)').text().trim());
+                        irc[6] = parseFloat($(element).find('td:nth-child(4)').text().trim());
                         break;
                     }
                     case 12 : {
-                        irc['9'] = parseFloat($(element).find('td:nth-child(4)').text().trim());
+                        irc[9] = parseFloat($(element).find('td:nth-child(4)').text().trim());
                         break;
                     }
                     case 15 : {
-                        irc['12'] = parseFloat($(element).find('td:nth-child(4)').text().trim());  
+                        irc[12] = parseFloat($(element).find('td:nth-child(4)').text().trim());  
                         break;
                     }
                     case 17 : {
-                        irc['18'] = parseFloat($(element).find('td:nth-child(4)').text().trim());
+                        irc[18] = parseFloat($(element).find('td:nth-child(4)').text().trim());
                         break;
                     }
                     case 18 : {
-                        irc['24'] = parseFloat($(element).find('td:nth-child(4)').text().trim());
+                        irc[24] = parseFloat($(element).find('td:nth-child(4)').text().trim());
                         break;
                     }
                     default: break;
@@ -1255,31 +1255,31 @@ class ManagementBank{
             data.each((i,element) => {
                 switch(i){
                     case 6 : {
-                        irc['1'] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
+                        irc[1] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
                         break;
                     }
                     case 8 : {
-                        irc['3'] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
+                        irc[3] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
                         break;
                     }
                     case 11 : {
-                        irc['6'] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
+                        irc[6] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
                         break;
                     }
                     case 14 : {
-                        irc['9'] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
+                        irc[9] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
                         break;
                     }
                     case 17 : {
-                        irc['12'] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
+                        irc[12] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
                         break;
                     }
                     case 20 : {
-                        irc['18'] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
+                        irc[18] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
                         break;
                     }
                     case 21 : {
-                        irc['24'] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
+                        irc[24] = parseFloat($(element).find('td:nth-child(2)').text().trim().replace('\,','.'));
                         break;
                     }
                     default: break;
@@ -1316,31 +1316,31 @@ class ManagementBank{
             data.each((i,element) => {
                 switch(i){
                     case 9 : {
-                        irc['1'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[1] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 11 : {
-                        irc['3'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[3] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 12 : {
-                        irc['6'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[6] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 13 : {
-                        irc['9'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[9] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 14 : {
-                        irc['12'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[12] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 16 : {
-                        irc['18'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[18] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 17 : {
-                        irc['24'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[24] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     default: break;
@@ -1378,31 +1378,31 @@ class ManagementBank{
             data.each((i,element) => {
                 switch(i){
                     case 9 : {
-                        irc['1'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[1] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 11 : {
-                        irc['3'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[3] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 12 : {
-                        irc['6'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[6] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 13 : {
-                        irc['9'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[9] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 14 : {
-                        irc['12'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[12] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 16 : {
-                        irc['18'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[18] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 17 : {
-                        irc['24'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[24] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     default: break;
@@ -1440,31 +1440,31 @@ class ManagementBank{
             data.each((i,element) => {
                 switch(i){
                     case 9 : {
-                        irc['1'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[1] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 11 : {
-                        irc['3'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[3] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 12 : {
-                        irc['6'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[6] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 13 : {
-                        irc['9'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[9] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 14 : {
-                        irc['12'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[12] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 16 : {
-                        irc['18'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[18] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 17 : {
-                        irc['24'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[24] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     default: break;
@@ -1503,31 +1503,31 @@ class ManagementBank{
             data.each((i,element) => {
                 switch(i){
                     case 9 : {
-                        irc['1'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[1] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 11 : {
-                        irc['3'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[3] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 12 : {
-                        irc['6'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[6] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 13 : {
-                        irc['9'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[9] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 14 : {
-                        irc['12'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[12] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 16 : {
-                        irc['18'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[18] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     case 17 : {
-                        irc['24'] = parseFloat($(element).find('td:nth-child(2)').text().trim());
+                        irc[24] = parseFloat($(element).find('td:nth-child(2)').text().trim());
                         break;
                     }
                     default: break;
@@ -1568,38 +1568,38 @@ class ManagementBank{
             data.each((i,element) => {
                 switch(i){
                     case 20 : {
-                        irc['1'] = parseFloat($(element).text().trim());
+                        irc[1] = parseFloat($(element).text().trim());
                         break;
                     }
                     case 28 : {
-                        irc['3'] = parseFloat($(element).text().trim());
+                        irc[3] = parseFloat($(element).text().trim());
                         break;
                     }
                     case 32 : {
-                        irc['6'] = parseFloat($(element).text().trim());
+                        irc[6] = parseFloat($(element).text().trim());
                         break;
                     }
                     case 36 : {
-                        irc['9'] = parseFloat($(element).text().trim());
+                        irc[9] = parseFloat($(element).text().trim());
                         break;
                     }
                     case 40 : {
-                        irc['12'] = parseFloat($(element).text().trim());
+                        irc[12] = parseFloat($(element).text().trim());
                         break;
                     }
                     case 52 : {
-                        irc['18'] = parseFloat($(element).text().trim());
+                        irc[18] = parseFloat($(element).text().trim());
                         break;
                     }
                     case 56 : {
-                        irc['24'] = parseFloat($(element).text().trim());
+                        irc[24] = parseFloat($(element).text().trim());
                         break;
                     }
                     default: break;
                     
                 }
             })
-            if(irc['1'] && irc['3'] && irc['6'] && irc['9'] && irc['12'] && irc['18'] && irc['24']) {
+            if(irc[1] && irc[3] && irc[6] && irc[9] && irc[12] && irc[18] && irc[24]) {
                 bank.annualInterestRate = irc;
             } else{
                 return undefined;
