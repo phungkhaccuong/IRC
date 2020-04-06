@@ -20,6 +20,7 @@ class SearchingController {
             period = parseInt(req.query.period);
         }
         if(money == -1 ) {
+            //ManagementBank.prototype.getDataFromVIETCOMBANK().catch(error => 'error:'+error)
             res.render("website");
             return;
         }
@@ -41,6 +42,7 @@ class SearchingController {
             ManagementBank.prototype.getDataFromSHB(),
             ManagementBank.prototype.getDataFromVIETINBANK(),
             ManagementBank.prototype.getDataFromVRB(),
+            ManagementBank.prototype.getDataFromHLBVN(),
             ManagementBank.prototype.getDataFromOtherBanks()
         ]).then(dataOfBanks => {
             var data = [];
@@ -53,17 +55,18 @@ class SearchingController {
                     }
                 }
             }
-            
             return data;
         });
         /** get data for displaying */
         try{
             dataForDisplaying = SearchingController.prototype.handleDataForDisplay(dataGetFromBanks,money,period);
+            res.render("result", {
+                data: dataForDisplaying,
+                period: period
+            })
         } catch(error) {
             console.log('There is an error:' + error)
         }
-        console.log(dataForDisplaying);
-        res.send(dataForDisplaying);
     }
 
     /**

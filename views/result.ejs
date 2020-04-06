@@ -1,0 +1,70 @@
+<div id="kq">
+<p class="page-header" style="font-style: italic;">Tìm thấy <%= data.length %> kết quả: Thứ tự sắp xệp từ cao xuống thấp, dựa trên lãi suất của ngân hàng</p>
+			<div class="row page-header">
+			    <div class="col-md-4 text-center">
+			        <h4>Ngân hàng</h4>
+			    </div>
+			    <div class="col-md-3 text-center">
+			        <h4>Lãi suất</h4>
+			    </div>
+			    <div class="col-md-3 text-center">
+			        <h4>Tiền bạn nhận được</h4>
+			    </div>
+			    <div class="col-md-2 text-center">
+			        <h4>Tìm hiểu thêm</h4>
+			    </div>
+            </div>
+            <% data.forEach((rowData, index) => { %>
+			<div class="row result ">
+			    <div class="col-md-4">
+			        <a href="#"><img style="background-color: white;" margin:"1px" width="220px" height="80px" src="<%= rowData.logo %>" alt="<%= rowData.name %> - <%= rowData.savingPackage %>" class=""></a>
+			        <h4 style="margin:3px 3px;"><%= rowData.savingPackage %></h4>
+			    </div>
+			    <div class="col-md-3 text-center">
+			        <p>Lãi suất</p>
+			        <h4><%= rowData.annualInterestRate[period] %> %</h4>
+			    </div>
+			    <div class="col-md-3 text-center">
+			        <p>Tiền lãi bạn nhận được</p>
+			        <h4><%= rowData.air %> đ</h4>
+			    </div>
+			    <div class="col-md-2 text-center">
+			        <a href="<%= rowData.webOfBank %>" target="_blank" type="button" class="btn btn-success btn-lg">Tới ngân hàng</a>
+			    </div>
+            </div>
+            <% }) %>
+			
+			<div class="row" style="margin-top:50px;">
+				<p style="font-style: italic;">Lưu ý: Thông tin chỉ mang tính chất tham khảo</p>
+				<p>Đặc biệt: Gửi tiết kiệm qua Finhay với lãi suất không kỳ hạn hấp dẫn!</p>
+			</div>
+			<!-- /.finhay -->
+			<div class="row result" style="margin-bottom: 100px; margin-top: 10px;">
+			    <div class="col-md-4">
+			        <a href="#"><img src="https://gobear-images-cdn.azureedge.net/vn/bank/fc6b82a4238447c795dc2ced09bbbdf2.png?height=88" alt="SCB - Tiền gửi tiết kiệm thông thường" class=""></a>
+			        <p>Gói tiết kiệm thông thường</p>
+			    </div>
+			    <div class="col-md-3 text-center">
+			        <p>Lãi suất</p>
+			        <h4>6,25%</h4>
+			    </div>
+			    <div class="col-md-3 text-center">
+			        <p>Tiền lãi bạn nhận được</p>
+			        <h4>625,552 đ</h4>
+			    </div>
+			    <div class="col-md-2 text-center">
+			        <button type="button" class="btn btn-success btn-lg">Tới ngân hàng</button>
+			    </div>
+			</div>
+			<footer>
+				<div class="row">
+						<hr/>
+						<p>Finhay với vai trò là một huấn luyện viên tài chính số giúp bạn tạo dựng thói quen tích lũy tiền lẻ, gây dựng và bảo vệ gia sản một cách thông minh bắt đầu chỉ từ 50.000đ.
+						Ứng dụng cũng khuyến khích người dùng xác định mục tiêu, tích lũy đều đặn và trong dài hạn để đạt được lợi ích lớn nhất. 
+						Website: https://finhay.com.vn/ <br>
+						Trải nghiệm ứng dụng tại: [App store]  [Google Play]</p>
+				</div>
+				<!-- /.row -->
+				</footer>
+
+</div>

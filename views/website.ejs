@@ -1,29 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Tool so sanh lai suat</title>
-        <meta charset="UTF-8">
-    <title>Bootstrap 3 Vertical Form Layout</title>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+ 
+        <title>Finhay-So sanh lai suat</title>
+ 
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+        <!-- Custom CSS -->
+        <!--<link href="CSS/mycss.css" rel="stylesheet"> -->
+        <style type="text/css">
+		    body {
+			    padding-top: 70px; 
+			}
+			.result {
+				margin-bottom: 10px;
+			    -moz-box-shadow: 3px 3px #666;
+			    -webkit-box-shadow: 3px 3px #666;
+			    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			}
+			.result {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+            /* Style buttons */
+			.buttonload {
+			  border: none; /* Remove borders */
+			  color: #008000; /* White text */
+			  padding: 12px 16px; /* Some padding */
+			  font-size: 50px /* Set a font size */
+			}
+
+		</style>
+ 
     </head>
+ 
     <body>
-        <div class="main-content">
-            <div class="container">
-            <div class="row" id="form">
-                <form class="form-horizontal">
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Số tiền gửi tiết kiệm</label>
-                        <div class="col-xs-3">
-                            <input type="text" class="form-control" id="money" placeholder="Số tiền gửi tiết kiệm">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Kì hạn</label>
-                        <div class="col-xs-3">
-                            <select class="form-control" id="period">
+		    <!-- Navigation -->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+		    <div class="container">
+		        <!-- Nav -->
+		        <div class="navbar-header">
+		            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+		                <span class="sr-only">Toggle navigation</span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		            </button>
+		        </div>
+		        <!-- Nav collapse -->
+		        <div class="collapse navbar-collapse" id="menu">
+		            <ul class="nav navbar-nav">
+		                <li>
+		                    <a href="#">Giới Thiệu</a>
+		                </li>
+		                <li>
+		                    <a href="#">Tin Tức</a>
+		                </li>
+		                <li>
+		                    <a href="#">Liên Hệ</a>
+		                </li>
+		            </ul>
+		 
+		            <div class="navbar-right">
+		                <button class="btn btn-danger navbar-btn">Register</button>
+		                <button class="btn btn-info navbar-btn">Login</button>
+		            </div>
+		        </div>
+		        <!-- /.navbar-collapse -->
+		    </div>
+		    <!-- /.container -->
+		</nav>
+		<!-- /Navigation -->
+		<div class="container">
+			<div class="row">
+			    <div class="col-lg-12">
+			        <h3 class="page-header">So sánh lãi suất gửi tiết kiệm của các ngân hàng | Tiền gửi có kỳ hạn | Lĩnh lãi cuối kỳ</h3>
+			    </div>
+			</div>
+			<div class="row jumbotron">
+				<div class="col-md-5">
+					<div class="form-group">
+			            <p>Bạn muốn gửi bao nhiêu tiền?</p>
+			            <input type="text-center" class="form-control" id="money" placeholder="Số tiền">
+			        </div>
+				</div>
+				<div class="col-md-5">
+					<div class="form-group">
+			            <p>Kì hạn</p>
+			            <select class="form-control" id="period">
                                 <option>1 tháng</option>
                                 <option>3 tháng</option>
                                 <option>6 tháng</option>
@@ -32,53 +105,99 @@
                                 <option>18 tháng</option>
                                 <option>24 tháng</option>
                             </select>
-                        </div>   
-                    </div>
-                    <div class="form-group">
-                        <div class="col-xs-offset-2 col-xs-3">    
-                            <button type="button" class="btn btn-primary" id="searching">Tìm kiếm</button>
-                        </div>
-                    </div>    
-                </form>
+			        </div>
+					
+				</div>
+				<div class="col-md-2">
+					<br>
+					<br>
+					<button type="button" class="btn btn-success btn-lg" id="searching">Tìm kiếm</button>
+				</div>
             </div>
+            <div class="row" id="displayResult">
+                <!-- display the result from API -->
+                <p class="buttonload text-center" style="display: none;">
+                    <i class="fa fa-spinner fa-spin"></i> Đang tải dữ liệu
+                </p>
             </div>
-            <div class="row" id="result">
+		
+		</div>
+		
 
-            </div>
-        </div>
-    </body>
-
-    <script>
-        $(document).ready(function() {
-
-            $("#searching").click(function(e){
-                //send data to server
-                var data = {
-                            money: $("#money").val(),
-                            period: $("#period").val()
-                        }
-
-                $.ajax({
-                    url: window.location.pathname,
-                    method: 'GET',
-                    dataType: 'html',
-                    data: data,
-                    error: function (response) {
-                        alert("Có lỗi xảy ra: " + response.message);
-                    },
-                    success: function (response) {
-                        //var status = response.error_code;
-                        // alert(response.message)
-                        console.log(response);
-                    if(response) {
-                        $('#result').html(response);
-                    }
-                        
-                    }
-                })
-                e.preventDefault();
-            }); 
-        });
-    </script>
+		
+ 
+        <!-- jQuery -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     
+ 
+        <!-- Bootstrap Core JavaScript -->
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function() {
+				var moneyFromForm = 0,periodFromForm = 0;
+
+				$('#money').click(function(){
+					var money = $(this).val().toString().replace(/\D/g,'');
+					$(this).val(money);
+				});
+
+				$('#money').keypress(function(evt){
+					var data =String.fromCharCode(evt.which);
+					if(!(/[0-9]/.test(data))) {
+						evt.preventDefault();
+					}
+				});
+	
+				$('#money').blur(function(){
+					var money = $(this).val().toString().replace(/\D/g,'');
+					$("#money").val(money.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " đ");
+				});
+
+                $("#searching").click(function(e){
+                    //send data to server
+                    var data = {
+                                money: $("#money").val(),
+                                period: $("#period").val()
+                            }
+					
+					//check money user enter into form, if user have not entered yet =>  return
+					if(!data.money) {
+						alert('Bạn cần nhập số tiền!');
+						return;
+					}
+					//set money vnd
+					var money = data.money.toString().replace(/\D/g,'');
+					$("#money").val(money.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " đ");
+					data.money = parseInt(data.money.toString().replace(/\D/g,''));
+
+					if(data.money === moneyFromForm && data.period === periodFromForm) {
+						return false;
+					} else {
+						
+						moneyFromForm = data.money;
+						periodFromForm = data.period;
+						$(".buttonload").removeAttr("style");
+						$.ajax({
+							url: window.location.pathname,
+							method: 'GET',
+							dataType: 'html',
+							data: data,
+							error: function (response) {
+								alert("Có lỗi xảy ra: " + response.message);
+							},
+							success: function (response) {
+							if(response) {
+								$('.buttonload').attr("style", "display:none");
+								$('#displayResult').html(response);
+							}
+								
+							}
+						})
+
+					}
+						e.preventDefault();
+					}); 
+            });
+        </script>
+    </body>
 </html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tool so sanh lai suat</title>
+        <meta charset="UTF-8">
+    <title>Bootstrap 3 Vertical Form Layout</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="main-content">
+            <div class="container">
+            <div class="row" id="form">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-xs-2">Số tiền gửi tiết kiệm</label>
+                        <div class="col-xs-3">
+                            <input type="text" class="form-control" id="money" placeholder="Số tiền gửi tiết kiệm">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-2">Kì hạn</label>
+                        <div class="col-xs-3">
+                            <select class="form-control" id="period">
+                                <option>1 tháng</option>
+                                <option>3 tháng</option>
+                                <option>6 tháng</option>
+                                <option>9 tháng</option>
+                                <option>12 tháng</option>
+                                <option>18 tháng</option>
+                                <option>24 tháng</option>
+                            </select>
+                        </div>   
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-offset-2 col-xs-3">    
+                            <button type="button" class="btn btn-primary" id="searching">Tìm kiếm</button>
+                        </div>
+                    </div>    
+                </form>
+            </div>
+            </div>
+            <div class="row" id="result">
+
+            </div>
+        </div>
+    </body>
+
+    <script>
+        $(document).ready(function() {
+
+            $("#searching").click(function(e){
+                //send data to server
+                var data = {
+                            money: $("#money").val(),
+                            period: $("#period").val()
+                        }
+
+                $.ajax({
+                    url: window.location.pathname,
+                    method: 'GET',
+                    dataType: 'html',
+                    data: data,
+                    error: function (response) {
+                        alert("Có lỗi xảy ra: " + response.message);
+                    },
+                    success: function (response) {
+                        //var status = response.error_code;
+                        // alert(response.message)
+                        console.log(response);
+                    if(response) {
+                        $('#result').html(response);
+                    }
+                        
+                    }
+                })
+                e.preventDefault();
+            }); 
+        });
+    </script>
+    
+</html>
+
