@@ -113,18 +113,17 @@
 					<br>
 					<button type="button" class="btn btn-success btn-lg" id="searching">Tìm kiếm</button>
 				</div>
-            </div>
+			</div>
+			<!-- loading image -->
+			<p class="buttonload text-center" id="btn" style="display: none">
+				<i class="fa fa-spinner fa-spin"></i> Đang tải dữ liệu
+			</p>
             <div class="row" id="displayResult">
                 <!-- display the result from API -->
-                <p class="buttonload text-center" style="display: none;">
-                    <i class="fa fa-spinner fa-spin"></i> Đang tải dữ liệu
-                </p>
+                
             </div>
 		
 		</div>
-		
-
-		
  
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -134,13 +133,16 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <script>
             $(document).ready(function() {
+				//the value is used to save data from imput
 				var moneyFromForm = 0,periodFromForm = 0;
 
+				//check if user click on input form
 				$('#money').click(function(){
 					var money = $(this).val().toString().replace(/\D/g,'');
 					$(this).val(money);
 				});
 
+				//check if user enter a value into form
 				$('#money').keypress(function(evt){
 					var data =String.fromCharCode(evt.which);
 					if(!(/[0-9]/.test(data))) {
@@ -148,6 +150,7 @@
 					}
 				});
 	
+				//check if user out of form
 				$('#money').blur(function(){
 					var money = $(this).val().toString().replace(/\D/g,'');
 					$("#money").val(money.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " đ");
@@ -156,7 +159,7 @@
                 $("#searching").click(function(e){
                     //send data to server
                     var data = {
-                                money: $("#money").val(),
+                                money: $("#money").val().replace(/\D/g,''),
                                 period: $("#period").val()
                             }
 					
@@ -166,19 +169,18 @@
 						return;
 					}
 					//set money vnd
-					var money = data.money.toString().replace(/\D/g,'');
-					$("#money").val(money.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " đ");
-					data.money = parseInt(data.money.toString().replace(/\D/g,''));
+					$("#money").val(data.money.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " đ");
+					data.money = parseInt(data.money);
 
 					if(data.money === moneyFromForm && data.period === periodFromForm) {
 						return false;
 					} else {
-						
 						moneyFromForm = data.money;
 						periodFromForm = data.period;
+						//remove the result if user click more one time
 						$("#kq").remove();
-						//$(".buttonload").removeAttr("style");
 						$('.buttonload').attr("style", "display:block");
+
 						$.ajax({
 							url: window.location.pathname,
 							method: 'GET',
