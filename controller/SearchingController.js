@@ -27,22 +27,22 @@ class SearchingController {
 
         /** run parallel to get interest rate of banks */
         dataGetFromBanks = await Promise.allSettled([
-            ManagementBank.prototype.getDataFromABBANK(),
-            ManagementBank.prototype.getDataFromAGRIBANK(),
-            ManagementBank.prototype.getDataFromBAOVIETBANK(),
-            ManagementBank.prototype.getDataFromCBBANK(),
-            ManagementBank.prototype.getDataFromINDOVINABANK(),
-            ManagementBank.prototype.getDataFromKIENLONGBANK(),
-            ManagementBank.prototype.getDataFromNAMABANK(),
-            ManagementBank.prototype.getDataFromOCB(),
-            ManagementBank.prototype.getDataFromOCEANBANK(),
-            ManagementBank.prototype.getDataFromPUBLICBANK(),
-            ManagementBank.prototype.getDataFromPVCOMBANK(),
-            ManagementBank.prototype.getDataFromSAIGONBANK(),
-            ManagementBank.prototype.getDataFromSHB(),
-            ManagementBank.prototype.getDataFromVIETINBANK(),
-            ManagementBank.prototype.getDataFromVRB(),
-            ManagementBank.prototype.getDataFromHLBVN(),
+            // ManagementBank.prototype.getDataFromABBANK(),
+            // ManagementBank.prototype.getDataFromAGRIBANK(),
+            // ManagementBank.prototype.getDataFromBAOVIETBANK(),
+            // ManagementBank.prototype.getDataFromCBBANK(),
+            // ManagementBank.prototype.getDataFromINDOVINABANK(),
+            // ManagementBank.prototype.getDataFromKIENLONGBANK(),
+            // ManagementBank.prototype.getDataFromNAMABANK(),
+            // ManagementBank.prototype.getDataFromOCB(),
+            // ManagementBank.prototype.getDataFromOCEANBANK(),
+            // ManagementBank.prototype.getDataFromPUBLICBANK(),
+            // ManagementBank.prototype.getDataFromPVCOMBANK(),
+            // ManagementBank.prototype.getDataFromSAIGONBANK(),
+            // ManagementBank.prototype.getDataFromSHB(),
+            // ManagementBank.prototype.getDataFromVIETINBANK(),
+            // ManagementBank.prototype.getDataFromVRB(),
+            // ManagementBank.prototype.getDataFromHLBVN(),
             ManagementBank.prototype.getDataFromOtherBanks()
         ]).then(dataOfBanks => {
             var data = [];
