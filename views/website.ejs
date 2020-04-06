@@ -10,8 +10,8 @@
         <title>Finhay-So sanh lai suat</title>
  
         <!-- Bootstrap Core CSS -->
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  
         <!-- Custom CSS -->
@@ -127,11 +127,11 @@
 		
  
         <!-- jQuery -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     
  
         <!-- Bootstrap Core JavaScript -->
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <script>
             $(document).ready(function() {
 				var moneyFromForm = 0,periodFromForm = 0;
@@ -176,7 +176,9 @@
 						
 						moneyFromForm = data.money;
 						periodFromForm = data.period;
-						$(".buttonload").removeAttr("style");
+						$("#kq").remove();
+						//$(".buttonload").removeAttr("style");
+						$('.buttonload').attr("style", "display:block");
 						$.ajax({
 							url: window.location.pathname,
 							method: 'GET',
