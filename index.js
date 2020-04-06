@@ -12,7 +12,7 @@ app.use(express.static('public'));
 
 require('./routers/routers')(app);
 
-console.log("IRC run on localhost:"+ 3001);
+console.log("IRC run on localhost:"+ 3010);
 
-app.listen(3001);
+app.listen(3010);
 
