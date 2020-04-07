@@ -13,7 +13,9 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- 
+		<!-- Ignite UI Required Combined CSS Files -->
+		<link href="https://cdn-na.infragistics.com/igniteui/2019.2/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
+		<link href="https://cdn-na.infragistics.com/igniteui/2019.2/latest/css/structure/infragistics.css" rel="stylesheet" />
         <!-- Custom CSS -->
         <!--<link href="CSS/mycss.css" rel="stylesheet"> -->
         <style type="text/css">
@@ -87,13 +89,13 @@
 			    </div>
 			</div>
 			<div class="row jumbotron">
-				<div class="col-md-5">
+				<div class="col-md-4">
 					<div class="form-group">
 			            <p>Bạn muốn gửi bao nhiêu tiền?</p>
 			            <input type="text-center" class="form-control" id="money" placeholder="Số tiền">
 			        </div>
 				</div>
-				<div class="col-md-5">
+				<div class="col-md-2">
 					<div class="form-group">
 			            <p>Kì hạn</p>
 			            <select class="form-control" id="period">
@@ -106,7 +108,12 @@
                                 <option>24 tháng</option>
                             </select>
 			        </div>
-					
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+			            <p>Ngân hàng</p>
+			            <div id="bank"></div>
+			        </div>
 				</div>
 				<div class="col-md-2">
 					<br>
@@ -130,11 +137,55 @@
     
  
         <!-- Bootstrap Core JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script src="https://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.8.3.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+		<!-- Ignite UI Required Combined JavaScript Files -->
+		<script src="https://cdn-na.infragistics.com/igniteui/2019.2/latest/js/infragistics.core.js"></script>
+		<script src="https://cdn-na.infragistics.com/igniteui/2019.2/latest/js/infragistics.lob.js"></script>
         <script>
             $(document).ready(function() {
 				//the value is used to save data from imput
 				var moneyFromForm = 0,periodFromForm = 0;
+				var colors = [
+					{id: 'BANKS', Name: 'All'},
+					{id: 'SHBVN', Name: 'Ngân hàng Shinhan Việt Nam'},
+					{id: 'TECHCOMBANK', Name: 'Ngân hàng Kỹ Thương'},
+					{id: 'UOB', Name: 'Ngân hàng UOB Việt Nam'},
+					{id: 'VIETABANK', Name: 'Ngân hàng Việt Á'},
+					{id: 'VIETBANK', Name: 'Ngân hàng Việt Nam Thương Tín'},
+					{id: 'VPBANK', Name: 'Ngân hàng Việt Nam Thịnh Vượng'},
+					{id: 'WOORIBANK', Name: 'Ngân hàng Woori Việt Nam'},
+					{id: 'SCBVLBANK', Name: 'Ngân hàng Standard Chartered Việt Nam'},
+					{id: 'SACOMBANK', Name: 'Ngân hàng Sài Gòn Thương Tín'},
+					{id: 'MSB', Name: 'Ngân hàng Hàng Hải'},
+					{id: 'HSBC', Name: 'Ngân hàng HSBC Việt Nam'},
+					{id: 'HDBANK', Name: 'Ngân hàng Phát triển TPHồ Chí Minh'},
+					{id: 'COOPBANK', Name: 'Ngân hàng Hợp tác xã Việt Nam'},
+					{id: 'CIMB', Name: 'Ngân hàng CIMB Việt Nam'},
+					{id: 'ACB', Name: 'Ngân hàng Á Châu'},
+					{id: 'BIDV', Name: 'Ngân hàng Đầu tư và Phát triển Việt Nam'},
+					{id: 'EXIMBANK', Name: 'Ngân hàng Xuất Nhập Khẩu'},
+					{id: 'PGBANK', Name: 'Ngân hàng Xăng dầu Petrolimex'},
+					{id: 'VIETCOMBANK', Name: 'Ngân hàng Ngoại Thương Việt Nam'},
+					{id: 'SCB', Name: 'Ngân hàng Sài Gòn'}
+        		];
+
+        $(function () {
+            $("#bank").igCombo({
+                width: 300,
+                dataSource: colors,
+                textKey: "Name",
+                valueKey: "id",
+                multiSelection: {
+                    enabled: true,
+                    showCheckboxes: true
+                },
+                dropDownOrientation: "bottom"
+            });
+            
+
+        });
 
 				//check if user click on input form
 				$('#money').click(function(){
@@ -160,12 +211,18 @@
                     //send data to server
                     var data = {
                                 money: $("#money").val().replace(/\D/g,''),
-                                period: $("#period").val()
+								period: $("#period").val(),
+								banks: $('#bank').igCombo('value')
                             }
-					
+					console.log($('#bank').igCombo('value'))
 					//check money user enter into form, if user have not entered yet =>  return
 					if(!data.money) {
 						alert('Bạn cần nhập số tiền!');
+						return;
+					}
+					//check choosing bank
+					if($('#bank').igCombo('value').length === 0){
+						alert('Bạn chưa chọn ngân hàng!');
 						return;
 					}
 					//set money vnd

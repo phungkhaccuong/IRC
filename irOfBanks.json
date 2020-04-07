@@ -1,7 +1,7 @@
 [
     {
         "name":"SHBVN",
-        "logo": "/images/SHINHANBANK.png",
+        "logo": "https://shinhan.com.vn/public/themes/shinhan/img/logo.svg",
     "webOfBank": "https://shinhan.com.vn/vi",
     "savingPackage": "Tiết kiệm thông thường",
     "minimumDepositAmount": 500000,
@@ -17,7 +17,7 @@
     },
     {
         "name":"TECHCOMBANK",
-        "logo": "/images/TECHCOMBANK.png",
+        "logo": "https://www.techcombank.com.vn/Content/images/logo.png",
     "webOfBank": "https://www.techcombank.com.vn/trang-chu",
     "savingPackage": "Tiết kiệm thông thường",
     "minimumDepositAmount": 500000,
@@ -33,7 +33,7 @@
     },
     {
         "name":"UOB",
-        "logo": "/images/UOB.jpg",
+        "logo": "https://www.uob.com.vn/web-resources/common/images/uob-logo.jpg",
     "webOfBank": "https://www.uob.com.vn/general/index.page",
     "savingPackage": "Tiết kiệm thông thường",
     "minimumDepositAmount": 500000,
@@ -49,7 +49,7 @@
     },
     {
         "name":"VIETABANK",
-        "logo": "/images/VIETABANK.png",
+        "logo": "https://www.vietabank.com.vn/Portals/0/HTML/logoweb.png",
     "webOfBank": "https://www.vietabank.com.vn/",
     "savingPackage": "Tiết kiệm thông thường",
     "minimumDepositAmount": 500000,
@@ -65,7 +65,7 @@
     },
     {
         "name":"VIETBANK",
-        "logo": "/images/VIETBANK.png",
+        "logo": "https://www.vietbank.com.vn/img/logo.png",
     "webOfBank": "https://www.vietbank.com.vn/",
     "savingPackage": "Tiết kiệm thông thường",
     "minimumDepositAmount": 500000,
@@ -81,7 +81,7 @@
     },
     {
         "name":"VPBANK",
-        "logo": "/images/VPBANK.png",
+        "logo": "https://www.vpbank.com.vn/sites/default/files/logo.jpg",
     "webOfBank": "https://www.vpbank.com.vn/",
     "savingPackage": "Tiết kiệm thông thường",
     "minimumDepositAmount": 500000,
@@ -96,8 +96,8 @@
         }
     },
     {
-        "name":"WOORI",
-        "logo": "/images/WOORIBANK.png",
+        "name":"WOORIBANK",
+        "logo": "https://go.wooribank.com/resources/images/logo/white/logo_vn.png",
     "webOfBank": "https://go.wooribank.com/vn/ib/main/IbMain.do",
     "savingPackage": "Tiết kiệm thông thường",
     "minimumDepositAmount": 500000,
@@ -112,8 +112,8 @@
         }
     },
     {
-        "name":"SCBVL",
-        "logo": "/images/SCBVL.png",
+        "name":"SCBVLBANK",
+        "logo": "https://www.sc.com/global/av/standard_chartered_logo_svg.svg",
     "webOfBank": "https://www.sc.com/vn/",
     "savingPackage": "Tiết kiệm thông thường",
     "minimumDepositAmount": 500000,
@@ -129,7 +129,7 @@
     },
     {
         "name":"SACOMBANK",
-        "logo": "/images/SACOMBANK.png",
+        "logo": "https://www.sacombank.com.vn/Style%20Library/2018/images/logo.png",
     "webOfBank": "https://www.sacombank.com.vn/Pages/default.aspx",
     "savingPackage": "Tiết kiệm thông thường",
     "minimumDepositAmount": 500000,
@@ -145,7 +145,7 @@
     },
     {
         "name":"MSB",
-        "logo": "/images/MSB.png",
+        "logo": "https://www.msb.com.vn/.msb-crud-portlets/faces/javax.faces.resource/images/top-logo-1.svg",
     "webOfBank": "https://www.msb.com.vn/",
     "savingPackage": "Tiết kiệm thông thường",
     "minimumDepositAmount": 500000,
@@ -161,7 +161,7 @@
     },
     {
         "name":"HSBC",
-        "logo": "/images/HSBC.png",
+        "logo": "https://cdn.hsbc.com.vn/content/dam/hsbc/hbmu/dcc/hsbc-logo.svg",
     "webOfBank": "https://www.hsbc.com.vn/",
     "savingPackage": "Tiết kiệm thông thường",
     "minimumDepositAmount": 500000,
@@ -177,7 +177,7 @@
     },
     {
         "name":"HDBANK",
-        "logo": "/images/HDBANK.png",
+        "logo": "https://www.hdbank.com.vn/static/image/Logo.png",
     "webOfBank": "https://www.hdbank.com.vn/",
     "savingPackage": "Tiết kiệm thông thường",
     "minimumDepositAmount": 500000,
@@ -193,7 +193,7 @@
     },
     {
         "name":"COOPBANK",
-        "logo": "/images/COOPBANK.png",
+        "logo": "http://co-opbank.vn/wp-content/uploads/2014/09/banner.png",
     "webOfBank": "http://co-opbank.vn/",
     "savingPackage": "Tiết kiệm thông thường",
     "minimumDepositAmount": 500000,
@@ -209,7 +209,7 @@
     },
     {
         "name":"CIMB",
-        "logo": "/images/CIMBBANK.jpg",
+        "logo": "https://www.cimbbank.com.vn/content/dam/cimbvietnam/cimblogo.jpg",
     "webOfBank": "https://www.cimbbank.com.vn/vi/personal/index.html",
     "savingPackage": "Tiết kiệm thông thường",
     "minimumDepositAmount": 500000,
@@ -225,7 +225,7 @@
     },
     {
         "name":"ACB",
-    "logo": "/images/ACB.png",
+"logo": "https://www.acb.com.vn/wps/wcm/connect/f6798828-b0d3-4061-8581-f7ee2b9c1d68/logo-acb.png?MOD=AJPERES&CACHEID=f6798828-b0d3-4061-8581-f7ee2b9c1d68",
     "webOfBank": "https://www.acb.com.vn/",
     "savingPackage": "Tiết kiệm thông thường",
     "minimumDepositAmount": 500000,
@@ -241,7 +241,7 @@
     },
     {
         "name":"BIDV",
-    "logo": "/images/BIDV.png",
+    "logo": "https://www.bidv.com.vn/wps/wcm/connect/8c895b83-ce8f-44d4-af3d-f1b5c1a382b0/bidv-logo.svg?MOD=AJPERES&cache=none",
     "webOfBank": "https://www.bidv.com.vn/",
     "savingPackage": "Tiết kiệm thông thường",
     "minimumDepositAmount": 500000,
@@ -257,7 +257,7 @@
     },
     {
         "name":"EXIMBANK",
-    "logo": "/images/EXIMBANK.png",
+    "logo": "https://eximbank.com.vn/home/Content/Images/logoeximbank.jpg",
     "webOfBank": "http://www.eximbank.com.vn/home/",
     "savingPackage": "Tiết kiệm thông thường",
     "minimumDepositAmount": 500000,
@@ -273,7 +273,7 @@
     },
     {
         "name":"PGBANK",
-    "logo": "/images/PGBANK.png",
+    "logo": "https://www.pgbank.com.vn/Image.ashx/image=png/466D73455E57442A9022AD84E69C0E00.png",
     "webOfBank": "https://www.pgbank.com.vn/",
     "savingPackage": "Tiết kiệm thông thường",
     "minimumDepositAmount": 500000,
@@ -289,7 +289,7 @@
     },
     {
         "name":"VIETCOMBANK",
-    "logo": "/images/VIETCOMBANK.png",
+    "logo": "https://portal.vietcombank.com.vn/Resources/v3/img/logo.png",
     "webOfBank": "https://www.vietbank.com.vn/",
     "savingPackage": "Tiết kiệm thông thường",
     "minimumDepositAmount": 500000,
@@ -305,7 +305,7 @@
     },
     {
         "name":"SCB",
-    "logo": "/images/SCB.png",
+    "logo": "https://logoart.vn/blog/wp-content/uploads/2011/08/thiet-ke-lo-go-sao-kim-13.png",
     "webOfBank": "https://www.scb.com.vn/",
     "savingPackage": "Tiết kiệm thông thường",
     "minimumDepositAmount": 500000,
