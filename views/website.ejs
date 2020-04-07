@@ -168,7 +168,23 @@
 					{id: 'EXIMBANK', Name: 'Ngân hàng Xuất Nhập Khẩu'},
 					{id: 'PGBANK', Name: 'Ngân hàng Xăng dầu Petrolimex'},
 					{id: 'VIETCOMBANK', Name: 'Ngân hàng Ngoại Thương Việt Nam'},
-					{id: 'SCB', Name: 'Ngân hàng Sài Gòn'}
+					{id: 'SCB', Name: 'Ngân hàng Sài Gòn'},
+					{id: 'ABBANK', Name: 'Ngân hàng An Bình'},
+					{id: 'AGRIBANK', Name: 'Ngân hàng NN&PT Nông thôn Việt Nam'},
+					{id: 'BAOVIETBANK', Name: 'Ngân hàng Bảo Việt'},
+					{id: 'CB', Name: 'Ngân hàng Xây dựng'},
+					{id: 'IVB', Name: 'Ngân hàng Indovina'},
+					{id: 'KIENLONGBANK', Name: 'Ngân hàng Kiên Long'},
+					{id: 'NAMABANK', Name: 'Ngân hàng Nam Á'},
+					{id: 'OCB', Name: 'Ngân hàng Phương Đông'},
+					{id: 'OCEANBANK', Name: 'Ngân hàng Đại Dương'},
+					{id: 'PBVN', Name: 'Ngân hàng Public Bank Việt Nam'},
+					{id: 'PVCOMBANK', Name: 'Ngân hàng Đại Chúng Việt Nam'},
+					{id: 'SAIGONBANK', Name: 'Ngân hàng Sài Gòn Công Thương'},
+					{id: 'SHB', Name: 'Ngân hàng Sài Gòn – Hà Nội'},
+					{id: 'VIETINBANK', Name: 'Ngân hàng Công thương Việt Nam'},
+					{id: 'VRB', Name: 'Ngân hàng Việt – Nga'},
+					{id: 'HLBVN', Name: 'Ngân hàng Hong Leong Việt Nam'}
         		];
 
         $(function () {
@@ -204,7 +220,9 @@
 				//check if user out of form
 				$('#money').blur(function(){
 					var money = $(this).val().toString().replace(/\D/g,'');
-					$("#money").val(money.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " đ");
+					if(money){
+						$("#money").val(money.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " đ");
+					}
 				});
 
                 $("#searching").click(function(e){
