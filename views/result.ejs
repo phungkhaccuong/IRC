@@ -41,19 +41,20 @@
 			<!-- /.finhay -->
 			<div class="row result" style="margin-bottom: 100px; margin-top: 10px;">
 			    <div class="col-md-4">
-			        <a href="#"><img src="https://gobear-images-cdn.azureedge.net/vn/bank/fc6b82a4238447c795dc2ced09bbbdf2.png?height=88" alt="SCB - Tiền gửi tiết kiệm thông thường" class=""></a>
-			        <p>Gói tiết kiệm thông thường</p>
+			        <a href="#"><img src="https://finhay.com.vn/wp-content/themes/finhayfaq/extra/images/logo.png" alt="FINHAY - Tiền gửi tiết kiệm thông thường" class=""></a>
+			        <h4>Gói lãi suất không kì hạn</h4>
 			    </div>
 			    <div class="col-md-3 text-center">
 			        <p>Lãi suất</p>
-			        <h4>6,25%</h4>
+			        <h4>7.4%</h4>
 			    </div>
 			    <div class="col-md-3 text-center">
-			        <p>Tiền lãi bạn nhận được</p>
-			        <h4>625,552 đ</h4>
+					<p>Tiền lãi bạn nhận được</p>
+					<% var m = Math.round((money * 7.4)*period/(12*100)).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')%>
+			        <h4><%= m %> đ</h4>
 			    </div>
 			    <div class="col-md-2 text-center">
-			        <button type="button" class="btn btn-success btn-lg">Tới ngân hàng</button>
+			        <a href="https://finhay.com.vn/" target="_blank" type="button" class="btn btn-success btn-lg">Tới ngân hàng</a>
 			    </div>
 			</div>
 			<footer>

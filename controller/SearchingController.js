@@ -80,7 +80,8 @@ class SearchingController {
             dataForDisplaying = SearchingController.prototype.handleDataForDisplay(dataGetFromBanks,money,period);
             res.render("result", {
                 data: dataForDisplaying,
-                period: period
+                period: period,
+                money: money
             })
         } catch(error) {
             console.log('There is an error:' + error)
