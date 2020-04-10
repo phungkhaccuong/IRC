@@ -86,7 +86,7 @@ class SearchingController {
         var dataForDisplaying;
         //get total page
         let totalRecord = dataGetFromBanks.length;
-        let perPage = 8;
+        let perPage = 5;
         let start = (currentPage - 1)* perPage;
         let end = currentPage * perPage;
         let totalPage = Math.ceil(totalRecord / perPage);
