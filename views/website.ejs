@@ -40,6 +40,17 @@
 			  padding: 12px 16px; /* Some padding */
 			  font-size: 50px /* Set a font size */
 			}
+			#info {
+				font-size: 18px; 
+				line-height: 1.5em;
+				text-align: justify;
+			}
+			#info h3 {
+				font-weight: bold;
+			}
+			.info div > p {
+				margin-bottom: 20px;
+			}
 
 		</style>
  
@@ -88,7 +99,7 @@
 			        <h3 class="page-header">So sánh lãi suất gửi tiết kiệm của các ngân hàng | Tiền gửi có kỳ hạn | Lĩnh lãi cuối kỳ</h3>
 			    </div>
 			</div>
-			<div class="row jumbotron" style="background-color:#33ff33">
+			<div class="row jumbotron" style="background-color:#41B649;">
 				<div class="col-md-4">
 					<div class="form-group">
 			            <p>Bạn muốn gửi bao nhiêu tiền?</p>
@@ -131,7 +142,7 @@
                 <div id="rs">
 					<div id="banks">
 						<p class="page-header" style="font-style: italic;"></p>
-						<div class="row page-header" style=" background-color: #33ff33;">
+						<div class="row page-header" style=" background-color: #41B649;">
 							<div class="col-md-4 text-center">
 								<h4>Ngân hàng</h4>
 							</div>
@@ -170,7 +181,7 @@
 				<!-- display package saving of Finhay-->
 				<div class="row" id="finhay" style="margin-top:50px;">
 					<p style="font-style: italic;">Lưu ý: Thông tin chỉ mang tính chất tham khảo</p>
-					<p style="background-color:#33ff33; display: inline-block" >Đặc biệt: Gửi tiết kiệm qua Finhay với lãi suất không kỳ hạn hấp dẫn!</p>
+					<p style="background-color:#41B649; display: inline-block" >Đặc biệt: Gửi tiết kiệm qua Finhay với lãi suất không kỳ hạn hấp dẫn!</p>
 				</div>
 				<!-- /.finhay -->
 				<div class="row result" style="margin-bottom: 100px; margin-top: 10px;">
@@ -192,7 +203,202 @@
 					</div>
 				</div>
 
-				<!-- display information-->
+				<!-- start display information -->
+				<div class="row" id="info">
+					<div class="row">
+						<h3 class="text-center" >Những điều bạn cần lưu ý trước khi gửi tiết kiệm tại ngân hàng</h3>
+						<p style="margin-bottom: 30px;">Từ trước tới nay, việc gửi tiền tiết kiệm vào các ngân hàng luôn được mọi người tin tưởng và coi là hình thức tích lũy an toàn. 
+							Đặc biệt, với sự phát triển của công nghệ thông tin như hiện nay, việc tiếp cận với các ngân hàng ngàng càng dễ dàng hơn. 
+							Tuy nhiên, càng có nhiều lựa chọn gửi tiết kiệm, đồng nghĩa với việc đưa ra quyết định càng khó khăn. 
+							Hãy tìm hiểu kỹ dựa trên những yếu tố dưới đây nhé.
+						</p>
+					</div>
+					<div class="row">
+						<div class="col-md-6 info">
+							<div>
+								<h3>1. Gửi tiền tiết kiệm là gì?</h3>
+								<p>Gửi tiết kiệm là một hình thức vừa tích lũy, vừa đầu tư. Bạn gửi tiền vào ngân hàng trong một khoảng thời gian nhất định, 
+									hết thời hạn này, ngân hàng sẽ trả lại cho bạn khoản tiền gốc và khoản tiền tăng thêm (tiền lãi).
+									Tiền lãi được tính dựa trên lãi suất của ngân hàng theo kỳ hạn gửi tiền tương ứng mà bạn chọn. 
+								</p>
+							</div>
+							<div>
+								<h3>2. Cách tính lãi suất tiết kiệm</h3>
+								<p>
+									Lãi suất tiết kiệm ngân hàng thường được hiểu là lãi suất %/năm. Công thức tính:<br>
+									<p style="font-weight: bold;">Số tiền lãi = Số tiền gửi x Lãi suất (%/năm) x Số ngày thực gửi / 365</p>
+									Ví dụ bạn gửi số tiền 20 triệu với lãi suất 7.4%/năm cho kỳ hạn 6 tháng từ ngày 1/1/2020 đến 1/7/2020, 
+									số tiền lãi nhận được là:
+									<p class="text-center">Số tiền lãi = 20.000.000 x 7.4% x 181 / 365 = 733.917</p>
+
+								</p>
+							</div>
+							<div>
+								<h3>3. Ngày đáo hạn và tất toán sổ tiết kiệm là gì?</h3>
+								<p>
+									<li style="list-style-type: disc; font-weight: bold;">Ngày đáo hạn</li>
+									Ngày đáo hạn (hay ngày đến hạn) được quy định dựa trên ngày mà bạn mở tài khoản tiết kiệm. 
+									Ví dụ nếu bạn chọn gửi tiền vào ngân hàng trong 1 năm, ngày cuối cùng của năm sẽ là ngày đáo hạn. 
+									Vào ngày này, bạn có thể thực hiện tất toán (hoặc đóng tài khoản tiết kiệm) 
+									để nhận lại toàn bộ cả tiền gốc và lãi được sinh ra.
+								</p>
+								<p>
+									<li style="list-style-type: disc; font-weight: bold;">Tất toán sổ tiết kiệm</li>
+									Chuyện gì sẽ xảy ra khi khoản tiền gửi tại ngân hàng hết hạn?<br>
+									Thông thường, ngân hàng sẽ liên hệ và đưa cho bạn hai lựa chọn:
+									<ul>
+										<li style="list-style-type: circle">
+											Tự động tái tục cả gốc và lãi: Toàn bộ số tiền gốc và lãi tiết kiệm sẽ tiếp tục được gửi cho ngân hàng. 
+										Lãi suất áp dụng là lãi suất niêm yết của ngân hàng tại thời điểm tái tục.
+										</li>
+										<li style="list-style-type: circle">
+											Tất toán: Tiền gốc và tiền lãi tiết kiệm phát sinh sẽ được gửi về tài khoản ngân hàng của bạn. 
+										Nếu muốn tiếp tục gửi tiết kiệm, bạn sẽ phải lựa chọn lại từ đầu (gói tiết kiệm nào, thời hạn bao lâu,...) 
+										</li>
+									</ul>
+								</p>
+							</div>
+							<div>
+								<h3>4. Các hình thức gửi tiết kiệm thường được lựa chọn</h3>
+								<p>
+									<p style="font-weight: 700;">Có hai hình thức gửi tiết kiệm ngân hàng hiện nay:</p>
+									<ul>
+										<li>
+											Gửi tiết kiệm không kỳ hạn: Đây là hình thức gửi tiết kiệm không cam kết về thời gian rút. 
+										Tức là khi gửi tiền vào, bạn có thể rút ra lúc nào cũng được, nhưng nhược điểm của hình thức này là lãi suất thấp. 
+										</li>
+										<li>
+											Gửi tiết kiệm có kỳ hạn: 
+										Đây là hình thức gửi tiết kiệm có cam kết thời gian rút về với mức lãi suất cố định. 
+										</li>
+									</ul>
+								</p>
+								<p>
+									<p style="font-weight: 700;">Thời hạn gửi tiết kiệm hiện nay thường được chia ra:</p>
+									<ul>
+										<li>Ngắn hạn (1-3 tháng)</li>
+										<li>Trung hạn (4-12 tháng) </li>
+										<li>Dài hạn (từ 1 năm trở lên)</li>
+									</ul>
+									<p>
+										Thời hạn càng dài thì lãi suất càng cao. Nhưng điều đó cũng đồng nghĩa rằng, 
+										nếu có chuyện cần phải sử dụng tiền, bạn sẽ mất lãi nếu rút ra giữa chừng, 
+										hoặc chỉ được hưởng lãi suất không kỳ hạn - thường là rất thấp, chỉ khoảng 0.2% đến 3%.<br>
+										(Kỳ hạn quá dài thì lãi suất sẽ linh động giảm dần để hạn chế rủi ro cho ngân hàng)
+
+									</p>
+								</p>
+							</div>
+							<div>
+								<h3>5. Khi gửi tiết kiệm tại ngân hàng, bạn cần cân nhắc điều gì?</h3>
+								<p style="font-weight: 700;">5.1 Lãi suất gửi tiết kiệm của ngân hàng</p>
+								<p>
+									Khi gửi tiền tiết kiệm, lãi suất ngân hàng nào cao nhất luôn là yếu tố đầu tiên mà khách hàng quan tâm. 
+									Thông thường theo thói quen, khách hàng thường tìm đến những ngân hàng lớn như Vietcombank, Vietinbank, BIDV,...
+								</p>
+								<p>
+									Tuy nhiên nếu bạn cũng làm vậy, có lẽ bạn đã bỏ qua rất nhiều lựa chọn hấp dẫn khác - các ngân hàng cổ phần, các ngân hàng nhỏ. 
+									Bởi để cạnh tranh khách hàng với những ngân hàng lớn, các ngân hàng này thường đưa ra các gói tiết kiệm với lãi suất cao để thu hút khách.
+								</p>
+								
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div>
+								<p style="font-weight: 700;">5.2 Kỳ hạn gửi tiết kiệm</p>
+								<p>
+									Như đã nhắc đến ở bên trên, kỳ hạn tiết kiệm là cơ sở để ngân hàng trả lãi. Kỳ hạn tiết kiệm càng dài thì lãi suất càng cao. 
+									Tuy nhiên, bạn nên cân nhắc kế hoạch chi tiêu của mình và gia đình trong tương lai,
+									hạn chế tối đa trường hợp đang gửi tiết kiệm thì phải rút tiền gấp và mất toàn bộ lãi.
+								</p>
+								<p>
+									Bạn có thể tham khảo lãi suất của một số ngân hàng dưới đây:
+									<ul style="list-style-type: none;">
+										<li><a href="https://portal.vietcombank.com.vn/LS/Pages/lai-suat.aspx?devicechannel=default">Lãi suất gửi tiết kiệm tại ngân hàng Vietcombank</a></li>
+										<li><a href="https://www.vietinbank.vn/web/home/vn/lai-suat">Lãi suất gửi tiết kiệm tại ngân hàng Vietinbank</a></li>
+										<li><a href="https://www.techcombank.com.vn/cong-cu-tien-ich/lai-suat">Lãi suất gửi tiết kiệm tại ngân hàng Techcombank</a></li>
+										<li><a href="https://www.agribank.com.vn/vn/lai-suat">Lãi suất gửi tiết kiệm tại ngân hàng Agribank</a></li>
+										<li><a href="https://www.shb.com.vn/category/lien-ket-nhanh/lai-suat-tiet-kiem/">Lãi suất gửi tiết kiệm tại ngân hàng SHB</a></li>
+										<li><a href="https://tpb.vn/wps/portal/vni/financial-toolkit/lai-suat/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zizd0NTYwMDQz9LPz9DAwcw7wCvYz8jY29fQ31w1EV-Ae7Gho4uvk4Bjq7Oxn5WpjpR5Go39PZwNHP2M0s1BTICDAhTr8BDuBoQKL9mAqi8Bsfrh-FagWWEEBXgOFFQpYU5IaGhkYYZHo6KioCAC12K9Y!/#tab-1">Lãi suất gửi tiết kiệm tại ngân hàng TPbank</a></li>
+										<li><a href="https://www.vpbank.com.vn/kh-ca-nhan/gui-tiet-kiem">Lãi suất gửi tiết kiệm tại ngân hàng VPbank</a></li>
+										<li><a href="https://www.bidv.com.vn/vn/tra-cuu-lai-suat">Lãi suất gửi tiết kiệm tại ngân hàng BIDV</a></li>
+										<li><a href="https://www.pgbank.com.vn/Desktop.aspx/Lai-suat-huy-dong/Lai-suat-huydong/">Lãi suất gửi tiết kiệm tại ngân hàng PGbank</a></li>
+										<li><a href="https://www.sacombank.com.vn/canhan/Pages/lai-suat.aspx">Lãi suất gửi tiết kiệm tại ngân hàng Sacombank</a></li>
+										<li><a href="https://www.mbbank.com.vn/26/28/29/san-pham-all/tien-gui-co-ky-han">Lãi suất gửi tiết kiệm tại ngân hàng MB bank</a></li>
+									</ul>
+								</p>
+							</div>
+							<div>
+								<h3>6.Sức mạnh của lãi kép</h3>
+								<p>
+									Bạn có thể hiểu về lãi kép (hay lãi suất kép) như sau:<br>
+									Khi bạn gửi tiết kiệm và có tiền lãi phát sinh, tiền lãi này sẽ được dồn vào tiền vốn ban đầu, 
+									tiếp tục mang tất cả (tổng tiền cả gốc và lãi) đi tái tiết kiệm (hay tái đầu tư) để lấy về lãi có giá trị cao hơn ở chu kỳ sau. 
+									Bạn gửi tiền càng lâu thì sức mạnh của lãi kép càng lớn.
+								</p>
+							</div>
+							<div>
+								<h3>7.Xu hướng gửi tiết kiệm hiện nay: Ứng dụng công nghệ tài chính</h3>
+								<p>
+									Chỉ vài năm trước đây thôi, nếu muốn gửi tiết kiệm, bạn sẽ phải đích thân ra ngoài ngân hàng, 
+									xếp hàng tại các quầy tiết kiệm để được tư vấn và mở sổ tiết kiệm, thì giờ đây mọi chuyện đã khác.
+								</p>
+								<p style="font-weight: 700;">7.1 Sử dụng ứng dụng mobile banking</p>
+								<p>
+									Hầu hết các ngân hàng hiện nay đều đã có ứng dụng di động của riêng mình. 
+									Ví dụ như app TPbank, app VPbank, app MBbank,... 
+									Chỉ cần thực hiện vài thao tác trên các ứng dụng này thì đã có thể mở tài khoản tiết kiệm và gửi tiền nhanh chóng mà không cần phải bước ra khỏi nhà. 
+									Việc tái tiết kiệm, rút tiền hay nhận lãi cũng có thể làm luôn trên đây.
+								</p>
+								<p style="font-weight: 700;">7.2. Tận dụng ưu thế của công nghệ tài chính (Fintech)</p>
+								<p>
+									Trong vài năm trở lại đây, sự xuất hiện của các ứng dụng công nghệ tài chính đã mang lại nhiều lựa chọn và cơ hội cho khách hàng cá nhân. 
+									Và Finhay có thể được coi là một trong những doanh nghiệp nổi bật trong lĩnh vực này.<br>
+									Cụ thể, khi đăng ký tài khoản Finhay, bạn đã có thể:
+								</p>
+								<ul>
+									<li style="list-style-type: disc; "><span style="font-weight: bold;">Đầu tư:</span> Tiếp cận tới các quỹ tài chính ở Việt Nam với số vốn chỉ vỏn vẹn 50.000đ. Finhay là cầu nối trung gian giữa bạn và các quỹ mở (Mutual Fund) tại Việt Nam. Ví dụ như:
+										<ul>
+											<li>
+												Quỹ BVBF – Được quản lý bởi công ty TNHH Quản lý Quỹ Bảo Việt (100% vốn của Tập đoàn Bảo Việt)
+											</li>
+											<li>
+												Quỹ BVPF –  Được quản lý bởi công ty TNHH Quản lý Quỹ Bảo Việt (100% vốn của Tập đoàn Bảo Việt)
+											</li>
+											<li>
+												Quỹ TCBF –  Được quản lý bởi công ty công ty TNHH Quản lý quỹ Kỹ thương – TechcomCapital -Techcom Capital (TCC)
+											</li>
+											<li>
+												Quỹ TCFF – Được quản lý bởi công ty TNHH Quản lý quỹ Kỹ thương – TechcomCapital -Techcom Capital (TCC)
+											</li>
+										</ul>
+										Thay vì phải trực tiếp bỏ số vốn lớn và tự mình đầu tư, 
+										các quỹ tài chính kết nối với Finhay sẽ giúp bạn làm điều đó (hay còn gọi là đầu tư uỷ thác).<br>
+										Tìm hiểu thêm về <a href="https://finhay.com.vn/dau-tu/">Đầu tư tại Finhay.</a>
+									</li>
+									<li>
+										<span style="font-weight: bold;">Tiết kiệm:</span> Tiết kiệm ở Finhay có gì giống và khác với gửi tiết kiệm thông thường? 
+										Giống ở chỗ: Bạn đều gửi tiền vào các ngân hàng (cụ thể là các ngân hàng liên kết với Finhay như Ngân hàng Bản Việt, 
+										Ngân hàng Eximbank,...) - an toàn và yên tâm. Khác biệt ở chỗ: Bạn nhận <span style="font-weight: bold;">lãi suất cao</span>  (lên tới 7.4%/năm) 
+										nhưng có thể <span style="font-weight: bold;">tiền bất kỳ lúc nào</span> . Tức là dù gửi tiền dài hạn hay ngắn hạn, bạn đều nhận được mức lãi suất lên tới 7.4%/năm và 
+										có thể rút tiền bất kỳ lúc nào mà không bị mất lãi.<br>
+										Tìm hiểu thêm về <a href="https://finhay.com.vn/tiet-kiem/">Tiết kiệm tại Finhay. </a>
+									</li>
+									<li>
+										<span style="font-weight: bold;">Trải nghiệm Finhay miễn phí tại:</span><br> 
+										<a href="https://finhay.page.link/AppFINHAY">https://finhay.page.link/AppFINHAY</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="row text-center" style="margin: 30px;">
+						<p>
+							Hãy cân nhắc thật kỹ về lãi suất, ngân hàng, hình thức tiết kiệm cũng như quyền lợi được hưởng của mỗi cách tiết kiệm nhé.
+						</p>
+					</div>
+				</div>
+				<!-- end display information -->
 				
 			</div>
 		
