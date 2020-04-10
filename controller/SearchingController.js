@@ -11,23 +11,42 @@ class SearchingController {
      * @param {response} res 
      */
     async call(req, res){
-        var money, period, dataGetFromBanks, banks ;
+        var money, period, dataGetFromBanks, banks,currentPage ;
         if(req.query.money === undefined || req.query.period === undefined) {
             money = -1;
             period = -1;
+            currentPage = -1;
         }else {
             money = parseFloat(req.query.money);
             period = parseInt(req.query.period);
             banks = req.query.banks;
+            currentPage = parseInt(req.query.page) || 1;
         }
         if(money == -1 ) {
-            //ManagementBank.prototype.getDataFromVIETCOMBANK().catch(error => 'error:'+error)
-            res.render("website");
+            /** this is default page */
+            dataGetFromBanks = await SearchingController.prototype.runDataOfBanks();
+            money = 50000000;
+            period = 1;
+            banks = ['TECHCOMBANK','VIETCOMBANK','AGRIBANK','VIETINBANK','VPBANK'];
+            let dataForDisplayingFirstTime = SearchingController.prototype.handleDataForDisplay(SearchingController.prototype.filterBanks(dataGetFromBanks,banks),money,period);
+            res.render("website", {
+                data: dataForDisplayingFirstTime,
+                period: period,
+                money: money
+            })
             return;
+        }else{
+            /** this is a page that user chose money, period and bank */
+            dataGetFromBanks = await SearchingController.prototype.runDataOfBanks();
+            //filter banks and render data
+            SearchingController.prototype.renderData(SearchingController.prototype.filterBanks(dataGetFromBanks,banks),money,period, currentPage, res)
         }
-
-        /** run parallel to get interest rate of banks */
-        dataGetFromBanks = await Promise.allSettled([
+    }
+    /**
+     * run parallel to get interest rate of banks
+     */
+    async runDataOfBanks() {
+        return await Promise.allSettled([
             // ManagementBank.prototype.getDataFromABBANK(),
             // ManagementBank.prototype.getDataFromAGRIBANK(),
             // ManagementBank.prototype.getDataFromBAOVIETBANK(),
@@ -49,23 +68,13 @@ class SearchingController {
             var data = [];
             for(let i = 0 ; i < dataOfBanks.length ; i++ ) {
                 if(dataOfBanks[i].status === 'fulfilled' && (typeof dataOfBanks[i].value !== 'undefined')) {
-                    if(!Array.isArray(dataOfBanks[i].value)) {
-                        data.push(dataOfBanks[i].value);
-                    }else{
-                        data.push(...dataOfBanks[i].value);
-                    }
+                    data.push(dataOfBanks[i].value);
                 }
             }
-            return data;
+            return data.flat();
         });
-
-        //filter banks and render data
-        if(banks.find(bankName => bankName === "BANKS")) {
-            SearchingController.prototype.renderData(dataGetFromBanks,money,period,res)
-        }else {
-            SearchingController.prototype.renderData(SearchingController.prototype.filterBanks(dataGetFromBanks,banks),money,period,res)
-        }
     }
+
 
     /**
      * this method is to get data of bank user chose, after that render to hmtl file
@@ -73,15 +82,24 @@ class SearchingController {
      * @param {*} money 
      * @param {*} period 
      */
-    renderData(dataGetFromBanks,money,period,res) {
+    renderData(dataGetFromBanks,money,period, currentPage, res) {
         var dataForDisplaying;
+        //get total page
+        let totalRecord = dataGetFromBanks.length;
+        let perPage = 8;
+        let start = (currentPage - 1)* perPage;
+        let end = currentPage * perPage;
+        let totalPage = Math.ceil(totalRecord / perPage);
+        let data = dataGetFromBanks.slice(start, end);
         /** get data for displaying */
         try{
-            dataForDisplaying = SearchingController.prototype.handleDataForDisplay(dataGetFromBanks,money,period);
+            dataForDisplaying = SearchingController.prototype.handleDataForDisplay(data,money,period);
             res.render("result", {
                 data: dataForDisplaying,
                 period: period,
-                money: money
+                money: money,
+                currentPage: currentPage,
+                totalPage: totalPage
             })
         } catch(error) {
             console.log('There is an error:' + error)
@@ -96,11 +114,14 @@ class SearchingController {
      */
     filterBanks(dataGetFromBanks,banks) {
         var data = [];
-        //filter banks that user choose
-        for(let i = 0; i < banks.length; i++) {
-            data.push(dataGetFromBanks.find(bank => bank.name === banks[i].toString()));
+        if(banks.find(bankName => bankName === "BANKS")) {
+            data = dataGetFromBanks;
+        } else {
+            //filter banks that user choose
+            for(let i = 0; i < banks.length; i++) {
+                data.push(dataGetFromBanks.find(bank => bank.name === banks[i].toString()));
+            }
         }
-    
         return data;
     }
 
@@ -134,5 +155,6 @@ class SearchingController {
 
         return sortBanks;
     }
+
 }
 module.exports = new SearchingController();

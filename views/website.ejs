@@ -23,7 +23,7 @@
 			    padding-top: 70px; 
 			}
 			.result {
-				margin-bottom: 10px;
+				margin-bottom: 30px;
 			    -moz-box-shadow: 3px 3px #666;
 			    -webkit-box-shadow: 3px 3px #666;
 			    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -88,11 +88,11 @@
 			        <h3 class="page-header">So sánh lãi suất gửi tiết kiệm của các ngân hàng | Tiền gửi có kỳ hạn | Lĩnh lãi cuối kỳ</h3>
 			    </div>
 			</div>
-			<div class="row jumbotron">
+			<div class="row jumbotron" style="background-color:#33ff33">
 				<div class="col-md-4">
 					<div class="form-group">
 			            <p>Bạn muốn gửi bao nhiêu tiền?</p>
-			            <input type="text-center" class="form-control" id="money" placeholder="Số tiền">
+			            <input type="text-center" class="form-control" id="money" value="50,000,000 đ" placeholder="Số tiền">
 			        </div>
 				</div>
 				<div class="col-md-2">
@@ -126,9 +126,75 @@
 				<i class="fa fa-spinner fa-spin"></i> Đang tải dữ liệu
 			</p>
             <div class="row" id="displayResult">
-                <!-- display the result from API -->
-                
-            </div>
+
+				<!-- display the result from API -->
+                <div id="rs">
+					<div id="banks">
+						<p class="page-header" style="font-style: italic;"></p>
+						<div class="row page-header" style=" background-color: #33ff33;">
+							<div class="col-md-4 text-center">
+								<h4>Ngân hàng</h4>
+							</div>
+							<div class="col-md-3 text-center">
+								<h4>Lãi suất</h4>
+							</div>
+							<div class="col-md-3 text-center">
+								<h4>Tiền bạn nhận được</h4>
+							</div>
+							<div class="col-md-2 text-center">
+								<h4>Tìm hiểu thêm</h4>
+							</div>
+						</div>
+						<% data.forEach((rowData, index) => { %>
+						<div class="row result ">
+							<div class="col-md-4">
+								<a href="#"><img style="background-color: white;" margin:"1px" width="200px" height="50px" src="<%= rowData.logo %>" alt="<%= rowData.name %> - <%= rowData.savingPackage %>" class=""></a>
+								<p style="margin:3px 3px;"><%= rowData.savingPackage %></p>
+							</div>
+							<div class="col-md-3 text-center">
+								<p>Lãi suất</p>
+								<h4><%= rowData.annualInterestRate[period] %> %</h4>
+							</div>
+							<div class="col-md-3 text-center">
+								<p>Tiền lãi bạn nhận được</p>
+								<h4><%= rowData.air %> đ</h4>
+							</div>
+							<div class="col-md-2 text-center">
+								<a href="<%= rowData.webOfBank %>" target="_blank" type="button" class="btn btn-success btn-lg">Tới ngân hàng</a>
+							</div>
+						</div>
+						<% }) %>
+					</div>
+				</div>
+
+				<!-- display package saving of Finhay-->
+				<div class="row" id="finhay" style="margin-top:50px;">
+					<p style="font-style: italic;">Lưu ý: Thông tin chỉ mang tính chất tham khảo</p>
+					<p style="background-color:#33ff33; display: inline-block" >Đặc biệt: Gửi tiết kiệm qua Finhay với lãi suất không kỳ hạn hấp dẫn!</p>
+				</div>
+				<!-- /.finhay -->
+				<div class="row result" style="margin-bottom: 100px; margin-top: 10px;">
+					<div class="col-md-4">
+						<a href="#"><img src="https://finhay.com.vn/wp-content/themes/finhayfaq/extra/images/logo.png" alt="FINHAY - Tiền gửi tiết kiệm thông thường" class=""></a>
+						<h4>Gói lãi suất không kì hạn</h4>
+					</div>
+					<div class="col-md-3 text-center">
+						<p>Lãi suất</p>
+						<h4>7.4%</h4>
+					</div>
+					<div class="col-md-3 text-center">
+						<p>Tiền lãi bạn nhận được</p>
+						<% var m = Math.round((money * 7.4)*period/(12*100)).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')%>
+			        	<h4><%= m %> đ</h4>
+					</div>
+					<div class="col-md-2 text-center">
+						<a href="https://finhay.com.vn/" target="_blank" type="button" class="btn btn-success btn-lg">Tới ngân hàng</a>
+					</div>
+				</div>
+
+				<!-- display information-->
+				
+			</div>
 		
 		</div>
  
@@ -146,7 +212,7 @@
         <script>
             $(document).ready(function() {
 				//the value is used to save data from imput
-				var moneyFromForm = 0,periodFromForm = 0;
+				var moneyFromForm = 0,periodFromForm = 0, data, nameOfBanks = [];
 				var colors = [
 					{id: 'BANKS', Name: 'All'},
 					{id: 'SHBVN', Name: 'Ngân hàng Shinhan Việt Nam'},
@@ -187,21 +253,21 @@
 					{id: 'HLBVN', Name: 'Ngân hàng Hong Leong Việt Nam'}
         		];
 
-        $(function () {
-            $("#bank").igCombo({
-                width: 300,
-                dataSource: colors,
-                textKey: "Name",
-                valueKey: "id",
-                multiSelection: {
-                    enabled: true,
-                    showCheckboxes: true
-                },
-                dropDownOrientation: "bottom"
-            });
-            
+				$(function () {
+					$("#bank").igCombo({
+						width: 300,
+						dataSource: colors,
+						textKey: "Name",
+						valueKey: "id",
+						multiSelection: {
+							enabled: true,
+							showCheckboxes: true
+						},
+						dropDownOrientation: "bottom"
+					});
+					
 
-        });
+				});
 
 				//check if user click on input form
 				$('#money').click(function(){
@@ -211,8 +277,8 @@
 
 				//check if user enter a value into form
 				$('#money').keypress(function(evt){
-					var data =String.fromCharCode(evt.which);
-					if(!(/[0-9]/.test(data))) {
+					var dataOfForm =String.fromCharCode(evt.which);
+					if(!(/[0-9]/.test(dataOfForm))) {
 						evt.preventDefault();
 					}
 				});
@@ -227,7 +293,7 @@
 
                 $("#searching").click(function(e){
                     //send data to server
-                    var data = {
+                    data = {
                                 money: $("#money").val().replace(/\D/g,''),
 								period: $("#period").val(),
 								banks: $('#bank').igCombo('value')
@@ -247,13 +313,14 @@
 					$("#money").val(data.money.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " đ");
 					data.money = parseInt(data.money);
 
-					if(data.money === moneyFromForm && data.period === periodFromForm) {
+					if(data.money === moneyFromForm && data.period === periodFromForm && nameOfBanks.length === data.banks.length) {
 						return false;
 					} else {
 						moneyFromForm = data.money;
 						periodFromForm = data.period;
+						nameOfBanks = data.banks;
 						//remove the result if user click more one time
-						$("#kq").remove();
+						$("#banks").remove();
 						$('.buttonload').attr("style", "display:block");
 
 						$.ajax({
@@ -267,7 +334,7 @@
 							success: function (response) {
 							if(response) {
 								$('.buttonload').attr("style", "display:none");
-								$('#displayResult').html(response);
+								$('#rs').html(response);
 							}
 								
 							}
@@ -276,6 +343,29 @@
 					}
 						e.preventDefault();
 					}); 
+				 //event when user click pagination button
+				 $('body').on('click', '.pageUserAsset', function(e) {
+					data.page = $(this).attr("value");
+					console.log(data);
+					//send data to server
+					$.ajax({
+						url: window.location.pathname,
+						method: 'GET',
+						dataType: 'html',
+						data: data,
+						error: function (response) {
+							alert("Có lỗi xảy ra: " + response.message);
+						},
+						success: function (response) {
+							if(response) {
+								$('#rs').html(response);
+							}
+						}
+					})
+					e.preventDefault();
+					
+				});
+        
             });
         </script>
     </body>
