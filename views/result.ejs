@@ -16,9 +16,9 @@
 	</div>
 	<% data.forEach((rowData, index) => { %>
 	<div class="row result ">
-		<div class="col-md-4">
-			<a href="#"><img style="background-color: white;" margin:"1px" width="200px" height="50px" src="<%= rowData.logo %>" alt="<%= rowData.name %> - <%= rowData.savingPackage %>" class=""></a>
-			<p style="margin:3px 3px;"><%= rowData.savingPackage %></p>
+		<div class="col-md-4" style="text-align:center;">
+			<img style="background-color: white; margin: 5px 5px auto;; padding: 10px;" width="200px" height="50px" src="<%= rowData.logo %>" alt="<%= rowData.name %> - <%= rowData.savingPackage %>" class="">
+			<p style="margin: auto; padding: 30px;"><%= rowData.savingPackage %></p>
 		</div>
 		<div class="col-md-3 text-center">
 			<p>Lãi suất</p>

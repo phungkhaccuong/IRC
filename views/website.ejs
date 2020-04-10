@@ -23,7 +23,7 @@
 			    padding-top: 70px; 
 			}
 			.result {
-				margin-bottom: 30px;
+				margin-bottom: 35px;
 			    -moz-box-shadow: 3px 3px #666;
 			    -webkit-box-shadow: 3px 3px #666;
 			    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -41,7 +41,7 @@
 			  font-size: 50px /* Set a font size */
 			}
 			#info {
-				font-size: 18px; 
+				font-size: 16px; 
 				line-height: 1.5em;
 				text-align: justify;
 			}
@@ -158,9 +158,9 @@
 						</div>
 						<% data.forEach((rowData, index) => { %>
 						<div class="row result ">
-							<div class="col-md-4">
-								<a href="#"><img style="background-color: white;" margin:"1px" width="200px" height="50px" src="<%= rowData.logo %>" alt="<%= rowData.name %> - <%= rowData.savingPackage %>" class=""></a>
-								<p style="margin:3px 3px;"><%= rowData.savingPackage %></p>
+							<div class="col-md-4" style="text-align:center;">
+								<img style="background-color: white; margin: 5px 5px auto;" width="200px" height="50px" src="<%= rowData.logo %>" alt="<%= rowData.name %> - <%= rowData.savingPackage %>" class="">
+								<p style="margin:auto; padding: 20px;"><%= rowData.savingPackage %></p>
 							</div>
 							<div class="col-md-3 text-center">
 								<p>Lãi suất</p>
@@ -185,9 +185,9 @@
 				</div>
 				<!-- /.finhay -->
 				<div class="row result" style="margin-bottom: 100px; margin-top: 10px;">
-					<div class="col-md-4">
-						<a href="#"><img src="https://finhay.com.vn/wp-content/themes/finhayfaq/extra/images/logo.png" alt="FINHAY - Tiền gửi tiết kiệm thông thường" class=""></a>
-						<h4>Gói lãi suất không kì hạn</h4>
+					<div class="col-md-4" style="text-align:center; margin: 5px 5px auto;">
+						<img style="margin: auto;" src="https://finhay.com.vn/wp-content/themes/finhayfaq/extra/images/logo.png" alt="FINHAY - Tiền gửi tiết kiệm thông thường" class="">
+						<p style="margin: auto;">Gói lãi suất không kì hạn</p>
 					</div>
 					<div class="col-md-3 text-center">
 						<p>Lãi suất</p>
@@ -329,7 +329,7 @@
 								</p>
 							</div>
 							<div>
-								<h3>6.Sức mạnh của lãi kép</h3>
+								<h3>6. Sức mạnh của lãi kép</h3>
 								<p>
 									Bạn có thể hiểu về lãi kép (hay lãi suất kép) như sau:<br>
 									Khi bạn gửi tiết kiệm và có tiền lãi phát sinh, tiền lãi này sẽ được dồn vào tiền vốn ban đầu, 
@@ -338,7 +338,7 @@
 								</p>
 							</div>
 							<div>
-								<h3>7.Xu hướng gửi tiết kiệm hiện nay: Ứng dụng công nghệ tài chính</h3>
+								<h3>7. Xu hướng gửi tiết kiệm hiện nay: Ứng dụng công nghệ tài chính</h3>
 								<p>
 									Chỉ vài năm trước đây thôi, nếu muốn gửi tiết kiệm, bạn sẽ phải đích thân ra ngoài ngân hàng, 
 									xếp hàng tại các quầy tiết kiệm để được tư vấn và mở sổ tiết kiệm, thì giờ đây mọi chuyện đã khác.
@@ -527,6 +527,7 @@
 						nameOfBanks = data.banks;
 						//remove the result if user click more one time
 						$("#banks").remove();
+						$("#info").remove();
 						$('.buttonload').attr("style", "display:block");
 
 						$.ajax({
