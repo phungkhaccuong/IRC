@@ -99,7 +99,8 @@ class SearchingController {
                 period: period,
                 money: money,
                 currentPage: currentPage,
-                totalPage: totalPage
+                totalPage: totalPage,
+                totalRecord:totalRecord
             })
         } catch(error) {
             console.log('There is an error:' + error)

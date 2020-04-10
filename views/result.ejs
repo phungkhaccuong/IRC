@@ -1,5 +1,5 @@
 <div id="banks">
-<p class="page-header" style="font-style: italic;">Tìm thấy <%= data.length %> kết quả: Thứ tự sắp xệp từ cao xuống thấp, dựa trên lãi suất của ngân hàng</p>
+<p class="page-header" style="font-style: italic;">Tìm thấy <%= totalRecord %> kết quả: Thứ tự sắp xệp từ cao xuống thấp, dựa trên lãi suất của ngân hàng</p>
 	<div class="row page-header" style="background-color:#41B649">
 		<div class="col-md-4 text-center">
 			<h4>Ngân hàng</h4>
@@ -33,7 +33,9 @@
 		</div>
 	</div>
 	<% }) %>
+
 	<div class="row h-100 justify-content-center align-items-center">
+		<p class="text-center;" style="font-style: italic;width: 100%; text-align: center; border-bottom: 1px solid #000; line-height: 0.1em;margin: 10px 0 20px; opacity:0.3"><span style="background:#fff; padding:0 10px;">Lưu ý: Thông tin chỉ mang tính chất tham khảo</span></p>
 		<div class="col-md-2 col-md-offset-3"></div>
 		<div class="btn-group" role="group">
 			<% if(currentPage > 1 && totalPage > 1) { %>
