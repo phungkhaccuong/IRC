@@ -643,7 +643,6 @@ class ManagementBank{
                     
                 }
             })
-            console.log(irc);
         })
         .catch( err => {
             console.log('there is something wrong:'+err);

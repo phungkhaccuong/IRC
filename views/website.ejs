@@ -159,8 +159,8 @@
 						<% data.forEach((rowData, index) => { %>
 						<div class="row result ">
 							<div class="col-md-4" style="text-align:center;">
-								<img style="background-color: white; margin: 5px 5px auto;" width="200px" height="50px" src="<%= rowData.logo %>" alt="<%= rowData.name %> - <%= rowData.savingPackage %>" class="">
-								<p style="margin:auto; padding: 20px;"><%= rowData.savingPackage %></p>
+								<img style="background-color: white; margin: 5px 5px auto;" width="200px" height="70px" src="<%= rowData.logo %>" alt="<%= rowData.name %> - <%= rowData.savingPackage %>" class="">
+								<p style="margin:auto; padding: 10px;"><%= rowData.savingPackage %></p>
 							</div>
 							<div class="col-md-3 text-center">
 								<p>Lãi suất</p>
@@ -211,7 +211,7 @@
 					<div class="row">
 						<h3 class="text-center" >Những điều bạn cần lưu ý trước khi gửi tiết kiệm tại ngân hàng</h3>
 						<p style="margin-bottom: 30px;">Từ trước tới nay, việc gửi tiền tiết kiệm vào các ngân hàng luôn được mọi người tin tưởng và coi là hình thức tích lũy an toàn. 
-							Đặc biệt, với sự phát triển của công nghệ thông tin như hiện nay, việc tiếp cận với các ngân hàng ngàng càng dễ dàng hơn. 
+							Đặc biệt, với sự phát triển của công nghệ thông tin như hiện nay, việc tiếp cận với các ngân hàng ngày càng dễ dàng hơn. 
 							Tuy nhiên, càng có nhiều lựa chọn gửi tiết kiệm, đồng nghĩa với việc đưa ra quyết định càng khó khăn. 
 							Hãy tìm hiểu kỹ dựa trên những yếu tố dưới đây nhé.
 						</p>
@@ -383,7 +383,7 @@
 										<span style="font-weight: bold;">Tiết kiệm:</span> Tiết kiệm ở Finhay có gì giống và khác với gửi tiết kiệm thông thường? 
 										Giống ở chỗ: Bạn đều gửi tiền vào các ngân hàng (cụ thể là các ngân hàng liên kết với Finhay như Ngân hàng Bản Việt, 
 										Ngân hàng Eximbank,...) - an toàn và yên tâm. Khác biệt ở chỗ: Bạn nhận <span style="font-weight: bold;">lãi suất cao</span>  (lên tới 7.4%/năm) 
-										nhưng có thể <span style="font-weight: bold;">tiền bất kỳ lúc nào</span> . Tức là dù gửi tiền dài hạn hay ngắn hạn, bạn đều nhận được mức lãi suất lên tới 7.4%/năm và 
+										nhưng có thể <span style="font-weight: bold;">rút tiền bất kỳ lúc nào</span> . Tức là dù gửi tiền dài hạn hay ngắn hạn, bạn đều nhận được mức lãi suất lên tới 7.4%/năm và 
 										có thể rút tiền bất kỳ lúc nào mà không bị mất lãi.<br>
 										Tìm hiểu thêm về <a href="https://finhay.com.vn/tiet-kiem/">Tiết kiệm tại Finhay. </a>
 									</li>
@@ -406,7 +406,7 @@
 				<!-- display infor dowload app-->
 				<div class="row">
 					<div class="col-md-2"></div>
-					<div class="box_app col-md-8 jumbotron text-center" style="background-color: #41B649;color: white;">
+					<div class="box_app col-md-8 text-center" style="background-size: 100% 100%;color: white; background-image: url('/images/banner.png'); margin-bottom: 100px;">
 						<h3 style="font-weight: bold; font-size: 30px;">Tải ứng dụng miễn phí</h3>
 						<p style="font-size: 14px;">Xây dựng gia sản ngay hôm nay</p>
 						<ul style="list-style-type: none;">
@@ -439,7 +439,7 @@
 				//the value is used to save data from imput
 				var moneyFromForm = 0,periodFromForm = 0, data, nameOfBanks = [];
 				var colors = [
-					{id: 'BANKS', Name: 'All'},
+					{id: 'BANKS', Name: 'Tất cả ngân hàng'},
 					{id: 'SHBVN', Name: 'Ngân hàng Shinhan Việt Nam'},
 					{id: 'TECHCOMBANK', Name: 'Ngân hàng Kỹ Thương'},
 					{id: 'UOB', Name: 'Ngân hàng UOB Việt Nam'},
@@ -522,8 +522,7 @@
                                 money: $("#money").val().replace(/\D/g,''),
 								period: $("#period").val(),
 								banks: $('#bank').igCombo('value')
-                            }
-					console.log($('#bank').igCombo('value'))
+					}
 					//check money user enter into form, if user have not entered yet =>  return
 					if(!data.money) {
 						alert('Bạn cần nhập số tiền!');
@@ -572,7 +571,6 @@
 				 //event when user click pagination button
 				 $('body').on('click', '.pageUserAsset', function(e) {
 					data.page = $(this).attr("value");
-					console.log(data);
 					//send data to server
 					$.ajax({
 						url: window.location.pathname,
