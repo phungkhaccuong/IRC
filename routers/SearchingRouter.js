@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var SearchingController = require('../controller/SearchingController')
 
-router.route('/search')
+router.route('/')
     .get(SearchingController.call)
     .post();
 
