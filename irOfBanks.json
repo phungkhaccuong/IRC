@@ -32,6 +32,22 @@
         }
     },
     {
+    "name":"BACABANK",
+    "logo": "/images/BACABANK.png",
+    "webOfBank": "https://www.baca-bank.vn/SitePages/trang-chu.aspx",
+    "savingPackage": "Tiền gửi tiết kiệm lĩnh lãi cuối kỳ",
+    "minimumDepositAmount": 1000000,
+    "annualInterestRate": {
+        "1": 4.75,
+        "3": 4.75,
+        "6": 7.4,
+        "9": 7.5,
+        "12": 7.75,
+        "18": 7.75,
+        "24": 7.75
+        }
+    },
+    {
     "name":"BAOVIETBANK",
     "logo": "/images/BAOVIETBANK.png",
     "webOfBank": "https://www.baovietbank.vn/",
@@ -573,6 +589,70 @@
         "12": 7.5,
         "18": 7.7,
         "24": 7.55
+        }
+    },
+    {
+    "name":"DONGABANK",
+    "logo": "/images/DONGABANK.png",
+    "webOfBank": "http://www.dongabank.com.vn/",
+    "savingPackage": "Tiền gửi tiết kiệm lĩnh lãi cuối kỳ",
+    "minimumDepositAmount": 500000,
+    "annualInterestRate": {
+        "1": 4.75,
+        "3": 4.75,
+        "6": 7.0,
+        "9": 7.2,
+        "12": 7.4,
+        "18": 7.6,
+        "24": 7.6
+        }
+    },
+    {
+    "name":"NCB",
+    "logo": "/images/NCB.png",
+    "webOfBank": "https://www.ncb-bank.vn/",
+    "savingPackage": "Tiền gửi tiết kiệm lĩnh lãi cuối kỳ",
+    "minimumDepositAmount": 500000,
+    "annualInterestRate": {
+        "1": 4.5,
+        "3": 4.75,
+        "6": 7.5,
+        "9": 7.55,
+        "12": 8,
+        "18": 8.15,
+        "24": 8.3
+        }
+    },
+    {
+    "name":"TPBANK",
+    "logo": "/images/TPBANK.png",
+    "webOfBank": "https://tpb.vn/",
+    "savingPackage": "Tiền gửi tiết kiệm lĩnh lãi cuối kỳ",
+    "minimumDepositAmount": 500000,
+    "annualInterestRate": {
+        "1": 4.75,
+        "3": 4.75,
+        "6": 6.4,
+        "9": 0,
+        "12": 0,
+        "18": 7.5,
+        "24": 0
+        }
+    },
+    {
+    "name":"VIB",
+    "logo": "/images/VIB.png",
+    "webOfBank": "https://www.vib.com.vn/wps/portal/vn/ca-nhan",
+    "savingPackage": "Tiền gửi tiết kiệm lĩnh lãi cuối kỳ",
+    "minimumDepositAmount": 500000,
+    "annualInterestRate": {
+        "1": 4.75,
+        "3": 4.75,
+        "6": 6.9,
+        "9": 6.9,
+        "12": 0,
+        "18": 7.2,
+        "24": 7.5
         }
     }
 ]
