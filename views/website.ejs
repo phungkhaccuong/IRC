@@ -10,105 +10,35 @@
         <title>Finhay-So sanh lai suat</title>
  
         <!-- Bootstrap Core CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="/css/bootstrap.min.css" >
+		<link rel="stylesheet" href="/css/mycss.css" >
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<!-- Ignite UI Required Combined CSS Files -->
 		<link href="https://cdn-na.infragistics.com/igniteui/2019.2/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
 		<link href="https://cdn-na.infragistics.com/igniteui/2019.2/latest/css/structure/infragistics.css" rel="stylesheet" />
         <!-- Custom CSS -->
         <!--<link href="CSS/mycss.css" rel="stylesheet"> -->
-        <style type="text/css">
-		    body {
-			    padding-top: 70px; 
-			}
-			.result {
-				margin-bottom: 35px;
-			    -moz-box-shadow: 3px 3px #666;
-			    -webkit-box-shadow: 3px 3px #666;
-			    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			}
-			.result {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
-            /* Style buttons */
-			.buttonload {
-			  border: none; /* Remove borders */
-			  color: #008000; /* White text */
-			  padding: 12px 16px; /* Some padding */
-			  font-size: 50px /* Set a font size */
-			}
-			#info {
-				font-size: 16px; 
-				line-height: 1.5em;
-				text-align: justify;
-			}
-			#info h3 {
-				font-weight: bold;
-			}
-			.info div > p {
-				margin-bottom: 20px;
-			}
-
-		</style>
+        <style type="text/css"></style>
  
     </head>
  
     <body>
-		    <!-- Navigation -->
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-		    <div class="container">
-		        <!-- Nav -->
-		        <div class="navbar-header">
-		            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
-		                <span class="sr-only">Toggle navigation</span>
-		                <span class="icon-bar"></span>
-		                <span class="icon-bar"></span>
-		                <span class="icon-bar"></span>
-		            </button>
-		        </div>
-		        <!-- Nav collapse -->
-		        <div class="collapse navbar-collapse" id="menu">
-		            <ul class="nav navbar-nav">
-		                <li>
-		                    <a href="#">Giới Thiệu</a>
-		                </li>
-		                <li>
-		                    <a href="#">Tin Tức</a>
-		                </li>
-		                <li>
-		                    <a href="#">Liên Hệ</a>
-		                </li>
-		            </ul>
-		 
-		            <div class="navbar-right">
-		                <button class="btn btn-danger navbar-btn">Register</button>
-		                <button class="btn btn-info navbar-btn">Login</button>
-		            </div>
-		        </div>
-		        <!-- /.navbar-collapse -->
-		    </div>
-		    <!-- /.container -->
-		</nav>
-		<!-- /Navigation -->
 		<div class="container">
 			<div class="row">
-			    <div class="col-lg-12">
-			        <h3 class="page-header">So sánh lãi suất gửi tiết kiệm của các ngân hàng | Tiền gửi có kỳ hạn | Lĩnh lãi cuối kỳ</h3>
+			    <div class="col">
+			        <h4 class="page-header">So sánh lãi suất gửi tiết kiệm của các ngân hàng | Tiền gửi có kỳ hạn | Lĩnh lãi cuối kỳ</h4>
 			    </div>
 			</div>
 			<div class="row jumbotron" style="background-color:#41B649;">
-				<div class="col-md-4">
+				<div class="col-sm-6 col-md-4">
 					<div class="form-group">
-			            <p style="font-weight: bold; color: white;">Bạn muốn gửi bao nhiêu tiền?</p>
+			            <h5 style="font-weight: bold; color: white;">Bạn muốn gửi bao nhiêu tiền?</h5>
 			            <input type="text-center" class="form-control" id="money" value="50,000,000 đ" placeholder="Số tiền">
 			        </div>
 				</div>
-				<div class="col-md-2">
+				<div class="col-sm-6 col-md-2">
 					<div class="form-group">
-			            <p style="font-weight: bold; color: white;">Kì hạn</p>
+			            <h5 style="font-weight: bold; color: white;">Kì hạn</h5>
 			            <select class="form-control" id="period">
                                 <option>1 tháng</option>
                                 <option>3 tháng</option>
@@ -120,41 +50,40 @@
                             </select>
 			        </div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-sm-8 col-md-4">
 					<div class="form-group">
-			            <p style="font-weight: bold; color: white;">Ngân hàng</p>
+			            <h5 style="font-weight: bold; color: white;">Ngân hàng</h5>
 			            <div id="bank"></div>
 			        </div>
 				</div>
-				<div class="col-md-2">
-					<br>
+				<div class="col-sm-4 col-md-2">
 					<br>
 					<button type="button" class="btn btn-success btn-lg" id="searching">Tìm kiếm</button>
 				</div>
 			</div>
 			<!-- loading image -->
-			<p class="buttonload text-center" id="btn" style="display: none">
-				<i class="fa fa-spinner fa-spin"></i> Đang tải dữ liệu
-			</p>
-            <div class="row" id="displayResult">
+			<div class="row">
+				<p class="buttonload text-center" id="btn" style="display: none">
+					<i class="fa fa-spinner fa-spin"></i> Đang tải dữ liệu
+				</p>
+			</div>
 
+            <div id="displayResult">
 				<!-- display the result from API -->
-				<div class="row">
 					<div id="rs">
 						<div id="banks">
-							<p class="page-header" style="font-style: italic;"></p>
 							<div class="row page-header" style=" background-color: #41B649;color: white;">
 								<div class="col-md-4 text-center">
-									<h4>Ngân hàng</h4>
-								</div>
-								<div class="col-md-3 text-center">
-									<h4>Lãi suất</h4>
-								</div>
-								<div class="col-md-3 text-center">
-									<h4>Tiền bạn nhận được</h4>
+									<h5>Ngân hàng</h5>
 								</div>
 								<div class="col-md-2 text-center">
-									<h4>Tìm hiểu thêm</h4>
+									<h5>Lãi suất</h5>
+								</div>
+								<div class="col-md-3 text-center">
+									<h5>Tiền bạn nhận được</h5>
+								</div>
+								<div class="col-md-3 text-center">
+									<h5>Tìm hiểu thêm</h5>
 								</div>
 							</div>
 							<% data.forEach((rowData, index) => { %>
@@ -163,46 +92,47 @@
 									<img style="background-color: white; margin: 5px 5px auto;" width="200px" height="70px" src="<%= rowData.logo %>" alt="<%= rowData.name %> - <%= rowData.savingPackage %>" class="">
 									<p style="margin:auto; padding: 10px;"><%= rowData.savingPackage %></p>
 								</div>
-								<div class="col-md-3 text-center">
+								<div class="col-md-2 text-center">
 									<p>Lãi suất</p>
-									<h4><%= rowData.annualInterestRate[period] %> %</h4>
+									<h5><%= rowData.annualInterestRate[period] %> %</h5>
 								</div>
 								<div class="col-md-3 text-center">
 									<p>Tiền lãi bạn nhận được</p>
-									<h4><%= rowData.air %> đ</h4>
+									<h5><%= rowData.air %> đ</h5>
 								</div>
-								<div class="col-md-2 text-center">
+								<div class="col-md-3 text-center">
 									<a href="<%= rowData.webOfBank %>" target="_blank" type="button" class="btn btn-success btn-lg">Tới ngân hàng</a>
 								</div>
 							</div>
 							<% }) %>
 						</div>
 					</div>
-				</div>
-
+	
 				<!-- display package saving of Finhay-->
-				<div class="row" id="finhay">
-					<div class="row" style="margin-top:50px;">
-						<p style="font-weight: bold; font-size: 18px;" >Đặc biệt: Gửi tiết kiệm qua Finhay với lãi suất không kỳ hạn hấp dẫn!</p>
+				<div id="finhay">
+					<div class="row" style="margin-top:70px;">
+						<div class="col">
+							<p style="font-weight: bold; font-size: 16px;" >Đặc biệt: Gửi tiết kiệm qua Finhay với lãi suất không kỳ hạn hấp dẫn!</p>
+						</div>
 					</div>
 					<!-- /.finhay -->
 					<div class="row result" style="margin-bottom: 100px; margin-top: 10px;">
 						<div class="col-md-3" style="text-align:center;">
 							<img style="background-color: white; margin: 10px 10px auto; padding: 10px;" width="170px" height="50px" src="https://finhay.com.vn/wp-content/themes/finhayfaq/extra/images/logo.png" alt="FINHAY - Tiền gửi tiết kiệm thông thường" class="">
-							<p style="margin: auto;">
-								<h5>Gửi tiền không kì hạn</h5>
-								<h5>Rút tiền bất kì lúc nào</h5>
-								<h5>Trả lãi hàng tháng &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h5>
+							<p>
+								<p>Gửi tiền không kì hạn</p>
+								<p>Rút tiền bất kì lúc nào</p>
+								<p>Trả lãi hàng tháng &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 							</p>
 						</div>
 						<div class="col-md-3 text-center">
 							<p>Lãi suất lên đến</p>
-							<h4>7.4%</h4>
+							<h5>7.4%</h5>
 						</div>
 						<div class="col-md-3 text-center">
 							<p>Tiền lãi bạn nhận được</p>
 							<% var m = Math.round((money * 7.4)*period/(12*100)).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')%>
-							<h4><%= m %> đ</h4>
+							<h5><%= m %> đ</h5>
 						</div>
 						<div class="col-md-3 text-center">
 							<a href="https://finhay.com.vn/tiet-kiem/?utm_source=tool&utm_medium=sosanhlai&utm_campaign=sosanhlai" target="_blank" type="button" class="btn btn-success btn-lg">Tiết kiệm cùng Finhay</a>
@@ -212,26 +142,28 @@
 				
 
 				<!-- start display information -->
-				<div class="row" id="info">
+				<div id="info">
 					<div class="row">
-						<h3 class="text-center" >Những điều bạn cần lưu ý trước khi gửi tiết kiệm tại ngân hàng</h3>
-						<p style="margin-bottom: 30px;">Từ trước tới nay, việc gửi tiền tiết kiệm vào các ngân hàng luôn được mọi người tin tưởng và coi là hình thức tích lũy an toàn. 
-							Đặc biệt, với sự phát triển của công nghệ thông tin như hiện nay, việc tiếp cận với các ngân hàng ngày càng dễ dàng hơn. 
-							Tuy nhiên, càng có nhiều lựa chọn gửi tiết kiệm, đồng nghĩa với việc đưa ra quyết định càng khó khăn. 
-							Hãy tìm hiểu kỹ dựa trên những yếu tố dưới đây nhé.
-						</p>
+						<div class="col">
+							<h4 class="text-center" >Những điều bạn cần lưu ý trước khi gửi tiết kiệm tại ngân hàng</h4>
+							<p style="margin-bottom: 30px;">Từ trước tới nay, việc gửi tiền tiết kiệm vào các ngân hàng luôn được mọi người tin tưởng và coi là hình thức tích lũy an toàn. 
+								Đặc biệt, với sự phát triển của công nghệ thông tin như hiện nay, việc tiếp cận với các ngân hàng ngày càng dễ dàng hơn. 
+								Tuy nhiên, càng có nhiều lựa chọn gửi tiết kiệm, đồng nghĩa với việc đưa ra quyết định càng khó khăn. 
+								Hãy tìm hiểu kỹ dựa trên những yếu tố dưới đây nhé.
+							</p>
+						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-6 info">
 							<div>
-								<h3>1. Gửi tiền tiết kiệm là gì?</h3>
+								<h4>1. Gửi tiền tiết kiệm là gì?</h4>
 								<p>Gửi tiết kiệm là một hình thức vừa tích lũy, vừa đầu tư. Bạn gửi tiền vào ngân hàng trong một khoảng thời gian nhất định, 
 									hết thời hạn này, ngân hàng sẽ trả lại cho bạn khoản tiền gốc và khoản tiền tăng thêm (tiền lãi).
 									Tiền lãi được tính dựa trên lãi suất của ngân hàng theo kỳ hạn gửi tiền tương ứng mà bạn chọn. 
 								</p>
 							</div>
 							<div>
-								<h3>2. Cách tính lãi suất tiết kiệm</h3>
+								<h4>2. Cách tính lãi suất tiết kiệm</h4>
 								<p>
 									Lãi suất tiết kiệm ngân hàng thường được hiểu là lãi suất %/năm. Công thức tính:<br>
 									<p style="font-weight: bold;">Số tiền lãi = Số tiền gửi x Lãi suất (%/năm) x Số ngày thực gửi / 365</p>
@@ -242,7 +174,7 @@
 								</p>
 							</div>
 							<div>
-								<h3>3. Ngày đáo hạn và tất toán sổ tiết kiệm là gì?</h3>
+								<h4>3. Ngày đáo hạn và tất toán sổ tiết kiệm là gì?</h4>
 								<p>
 									<li style="list-style-type: disc; font-weight: bold;">Ngày đáo hạn</li>
 									Ngày đáo hạn (hay ngày đến hạn) được quy định dựa trên ngày mà bạn mở tài khoản tiết kiệm. 
@@ -267,7 +199,7 @@
 								</p>
 							</div>
 							<div>
-								<h3>4. Các hình thức gửi tiết kiệm thường được lựa chọn</h3>
+								<h4>4. Các hình thức gửi tiết kiệm thường được lựa chọn</h4>
 								<p>
 									<p style="font-weight: 700;">Có hai hình thức gửi tiết kiệm ngân hàng hiện nay:</p>
 									<ul>
@@ -298,7 +230,7 @@
 								</p>
 							</div>
 							<div>
-								<h3>5. Khi gửi tiết kiệm tại ngân hàng, bạn cần cân nhắc điều gì?</h3>
+								<h4>5. Khi gửi tiết kiệm tại ngân hàng, bạn cần cân nhắc điều gì?</h4>
 								<p style="font-weight: 700;">5.1 Lãi suất gửi tiết kiệm của ngân hàng</p>
 								<p>
 									Khi gửi tiền tiết kiệm, lãi suất ngân hàng nào cao nhất luôn là yếu tố đầu tiên mà khách hàng quan tâm. 
@@ -337,7 +269,7 @@
 								</p>
 							</div>
 							<div>
-								<h3>6. Sức mạnh của lãi kép</h3>
+								<h4>6. Sức mạnh của lãi kép</h4>
 								<p>
 									Bạn có thể hiểu về lãi kép (hay lãi suất kép) như sau:<br>
 									Khi bạn gửi tiết kiệm và có tiền lãi phát sinh, tiền lãi này sẽ được dồn vào tiền vốn ban đầu, 
@@ -346,7 +278,7 @@
 								</p>
 							</div>
 							<div>
-								<h3>7. Xu hướng gửi tiết kiệm hiện nay: Ứng dụng công nghệ tài chính</h3>
+								<h4>7. Xu hướng gửi tiết kiệm hiện nay: Ứng dụng công nghệ tài chính</h4>
 								<p>
 									Chỉ vài năm trước đây thôi, nếu muốn gửi tiết kiệm, bạn sẽ phải đích thân ra ngoài ngân hàng, 
 									xếp hàng tại các quầy tiết kiệm để được tư vấn và mở sổ tiết kiệm, thì giờ đây mọi chuyện đã khác.
@@ -411,8 +343,8 @@
 				<!-- display infor dowload app-->
 				<div class="row">
 					<div class="col-md-2"></div>
-					<div class="box_app col-md-8 text-center" style="background-size: 100% 100%;color: white; background-image: url('/images/banner.png'); margin-bottom: 100px;">
-						<h3 style="font-weight: bold; font-size: 30px;">Tải ứng dụng miễn phí</h3>
+					<div class="col-md-8 text-center" style="background-size: 100% 100%;color: white; background-image: url('/images/banner.png');">
+						<h4 style="font-weight: bold; font-size: 30px; padding-top: 20px;">Tải ứng dụng miễn phí</h4>
 						<p style="font-size: 14px;">Xây dựng gia sản ngay hôm nay</p>
 						<ul style="list-style-type: none;">
 							<li style="display: inline;"><a href="https://apps.apple.com/vn/app/finhay/id1336942463?utm_campaign=taiapp&amp;utm_medium=button&amp;utm_source=website_finhay"><img src="https://finhay.com.vn/wp-content/themes/finhayfaq/extra/images/img_appstore.png" alt=""></a></li>
@@ -429,13 +361,13 @@
 		</div>
  
         <!-- jQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    
+        <script src="/js/jquery-3.5.0.min.js"></script>
  
-        <!-- Bootstrap Core JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<!-- Bootstrap Core JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
 		<script src="https://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.8.3.js"></script>
-        <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
 		<!-- Ignite UI Required Combined JavaScript Files -->
 		<script src="https://cdn-na.infragistics.com/igniteui/2019.2/latest/js/infragistics.core.js"></script>
 		<script src="https://cdn-na.infragistics.com/igniteui/2019.2/latest/js/infragistics.lob.js"></script>

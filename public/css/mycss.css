@@ -1,0 +1,33 @@
+body {
+    padding-top: 70px; 
+}
+.result {
+    margin-bottom: 35px;
+    -moz-box-shadow: 3px 3px #666;
+    -webkit-box-shadow: 3px 3px #666;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ /* Style buttons */
+.buttonload {
+    border: none; /* Remove borders */
+    color: #008000; /* White text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 50px /* Set a font size */
+}
+#info {
+    font-size: 16px; 
+    line-height: 1.5em;
+    text-align: justify;
+}
+#info h3 {
+    font-weight: bold;
+}
+.info div > p {
+    margin-bottom: 20px;
+}
