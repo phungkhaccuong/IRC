@@ -17,19 +17,19 @@
 	</div>
 	<% data.forEach((rowData, index) => { %>
 	<div class="row result ">
-		<div class="col-md-4" style="text-align:center;" id="sp">
+		<div class="col-12 col-md-4" style="text-align:center;" id="sp">
 			<img style="background-color: white; margin: 5px 5px auto; padding: 10px;" width="200px" height="70px" src="<%= rowData.logo %>" alt="<%= rowData.name %> - <%= rowData.savingPackage %>" class="">
 			<p style="margin: auto; padding: 10px;"><%= rowData.savingPackage %></p>
 		</div>
-		<div class="col-md-2 text-center" id="ls">
+		<div class="col-6 ol-md-2 text-center" id="ls">
 			<p>Lãi suất</p>
 			<h5><%= rowData.annualInterestRate[period] %> %</h5>
 		</div>
-		<div class="col-md-3 text-center" id="tl">
+		<div class="col-6 col-md-3 text-center" id="tl">
 			<p>Tiền lãi bạn nhận được</p>
 			<h5><%= rowData.air %> đ</h5>
 		</div>
-		<div class="col-md-3 text-center" id="btn">
+		<div class="col-12 col-md-3 text-center" id="btn">
 			<a href="<%= rowData.webOfBank %>" target="_blank" type="button" class="btn btn-success btn-lg">Tới ngân hàng</a>
 		</div>
 	</div>
@@ -67,24 +67,24 @@
 	</div>
 	<!-- /.finhay -->
 	<div class="row result" style="margin-bottom: 100px; margin-top: 10px;">
-		<div class="col-md-3" style="text-align:center;">
+		<div class="col-12 col-md-3" style="text-align:center;">
 			<img style="background-color: white; margin: 10px 10px auto; padding: 10px;" width="170px" height="50px" src="https://finhay.com.vn/wp-content/themes/finhayfaq/extra/images/logo.png" alt="FINHAY - Tiền gửi tiết kiệm thông thường" class="">
 			<p>
-				<p>Gửi tiền không kì hạn</p>
-				<p>Rút tiền bất kì lúc nào</p>
-				<p>Trả lãi hàng tháng &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+				<p><i class="fas fa-check"></i> Gửi tiền không kì hạn</p>
+				<p><i class="fas fa-check"></i> Rút tiền bất kì lúc nào</p>
+				<p><i class="fas fa-check"></i> Trả lãi hàng tháng &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 			</p>
 		</div>
-		<div class="col-md-3 text-center">
+		<div class="col-6 col-md-3 text-center">
 			<p>Lãi suất lên đến</p>
 			<h5>7.4%</h5>
 		</div>
-		<div class="col-md-3 text-center">
+		<div class="col-6 col-md-3 text-center">
 			<p>Tiền lãi bạn nhận được</p>
 			<% var m = Math.round((money * 7.4)*period/(12*100)).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')%>
 			<h5><%= m %> đ</h5>
 		</div>
-		<div class="col-md-3 text-center">
+		<div class="col-12 col-md-3 text-center">
 			<a href="https://finhay.com.vn/tiet-kiem/?utm_source=tool&utm_medium=sosanhlai&utm_campaign=sosanhlai" target="_blank" type="button" class="btn btn-success btn-lg">Tiết kiệm cùng Finhay</a>
 		</div>
 	</div>
