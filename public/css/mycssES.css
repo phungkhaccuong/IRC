@@ -1,0 +1,21 @@
+body {
+    padding-top: 40px; 
+}
+div.result div.col-md-4 {
+    margin: 10px auto;
+}
+
+div.result div#btn {
+    margin: 15px auto;
+}
+
+div#btnFinhay {
+    margin: 15px auto;
+}
+#header {
+    display: none;
+}
+.fas{
+    font-size: 20px;
+    color:green
+}

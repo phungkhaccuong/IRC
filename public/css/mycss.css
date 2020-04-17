@@ -31,3 +31,7 @@ body {
 .info div > p {
     margin-bottom: 20px;
 }
+.fas{
+    font-size: 20px;
+    color:green
+}

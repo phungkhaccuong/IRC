@@ -1,7 +1,7 @@
 <div id="banks">
 <p class="page-header" style="font-style: italic;">Tìm thấy <%= totalRecord %> kết quả: Thứ tự sắp xệp từ cao xuống thấp, dựa trên lãi suất của ngân hàng</p>
 <hr>	
-<div class="row page-header" style=" background-color: #41B649;color: white;">
+<div class="row page-header" id="header" style=" background-color: #41B649;color: white;">
 		<div class="col-md-4 text-center">
 			<h5>Ngân hàng</h5>
 		</div>
@@ -17,19 +17,19 @@
 	</div>
 	<% data.forEach((rowData, index) => { %>
 	<div class="row result ">
-		<div class="col-md-4" style="text-align:center;">
+		<div class="col-md-4" style="text-align:center;" id="sp">
 			<img style="background-color: white; margin: 5px 5px auto; padding: 10px;" width="200px" height="70px" src="<%= rowData.logo %>" alt="<%= rowData.name %> - <%= rowData.savingPackage %>" class="">
 			<p style="margin: auto; padding: 10px;"><%= rowData.savingPackage %></p>
 		</div>
-		<div class="col-md-2 text-center">
+		<div class="col-md-2 text-center" id="ls">
 			<p>Lãi suất</p>
 			<h5><%= rowData.annualInterestRate[period] %> %</h5>
 		</div>
-		<div class="col-md-3 text-center">
+		<div class="col-md-3 text-center" id="tl">
 			<p>Tiền lãi bạn nhận được</p>
 			<h5><%= rowData.air %> đ</h5>
 		</div>
-		<div class="col-md-3 text-center">
+		<div class="col-md-3 text-center" id="btn">
 			<a href="<%= rowData.webOfBank %>" target="_blank" type="button" class="btn btn-success btn-lg">Tới ngân hàng</a>
 		</div>
 	</div>
