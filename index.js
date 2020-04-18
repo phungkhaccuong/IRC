@@ -14,5 +14,5 @@ require('./routers/routers')(app);
 
 console.log("IRC run on localhost:"+ 3010);
 
-app.listen(3010);
+app.listen(process.env.PORT || 3010);
 
