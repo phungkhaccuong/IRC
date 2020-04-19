@@ -154,14 +154,11 @@ class SearchingController {
      */
     filterBanks(dataGetFromBanks,banks) {
         var data = [];
-        if(banks.find(bankName => bankName === "BANKS")) {
-            data = dataGetFromBanks;
-        } else {
-            //filter banks that user choose
-            for(let i = 0; i < banks.length; i++) {
-                data.push(dataGetFromBanks.find(bank => bank.name === banks[i].toString()));
-            }
+        //filter banks that user choose
+        for(let i = 0; i < banks.length; i++) {
+            data.push(dataGetFromBanks.find(bank => bank.name === banks[i].toString()));
         }
+        
         return data;
     }
 }
