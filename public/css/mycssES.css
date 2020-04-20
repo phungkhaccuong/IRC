@@ -20,6 +20,6 @@ div#btnFinhay {
     color:green
 }
 
-#logo li {
-    background-color: inherit !important;
+#loadApp li img {
+    width: 100px;
 }
