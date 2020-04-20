@@ -19,3 +19,7 @@ div#btnFinhay {
     font-size: 20px;
     color:green
 }
+
+#logo li {
+    background-color: inherit !important;
+}
